@@ -11,8 +11,8 @@ Intro to TALEs and Hoxes
 	1. history and general perspective of Hox cofactors
 
 Pbx was identified in Drosophila in 1990 as extradenticle {Peifer and Wieschaus 1990} and proposed as a Hox protein cofactor based on phenotype. In parallel, it was identified as the DNA binding part of the chimeric protein produced by the t(1;19) translocation found in human pre-B cell acute lymphoblastic leukemia {Kamps et al 1990}
-Meis was identified in 199
-Prep was identified in 
+Meis1 was identified in 1995 as a proto-oncogene locus in which the ecotropic murine leukemia is inserted in BXH-2 mice {Moskow et al. 1995}
+Prep1 was identified in 1198 as a component of the urokinase enhancer factor 3 capable of forming a DNA binding-independent heterodimer with Pbx1 {Berthelsen et al. 1998} 
 
 	2. philogeny: hoxes, tales
 
@@ -22,7 +22,7 @@ Prep was identified in
 
 	5. binding specifities
 
-	6. Functions:
+	6. Functions, phenotypes:
 
 Intro to ChIP-seq
 
