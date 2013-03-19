@@ -1,5 +1,5 @@
 
-Intro to TALEs and Hoxes
+A) Intro to TALEs and Hoxes
 	1. Hoxes
 
 		1.1 history, Function
@@ -8,23 +8,25 @@ Intro to TALEs and Hoxes
 		1.3 the need for cofactors
 
 
-	1. history and general perspective of Hox cofactors
+	2. history and general perspective of Hox cofactors
 
-Pbx was identified in Drosophila in 1990 as extradenticle {Peifer and Wieschaus 1990} and proposed as a Hox protein cofactor based on phenotype. In parallel, it was identified as the DNA binding part of the chimeric protein produced by the t(1;19) translocation found in human pre-B cell acute lymphoblastic leukemia {Kamps et al 1990}
-Meis1 was identified in 1995 as a proto-oncogene locus in which the ecotropic murine leukemia is inserted in BXH-2 mice {Moskow et al. 1995}
-Prep1 was identified in 1198 as a component of the urokinase enhancer factor 3 capable of forming a DNA binding-independent heterodimer with Pbx1 {Berthelsen et al. 1998} 
+Pbx was identified in Drosophila in 1990 as extradenticle {Peifer and Wieschaus 1990} and proposed as a Hox protein cofactor based on phenotype. In parallel, it was identified as the DNA binding part of the chimeric protein produced by the t(1;19) translocation found in human pre-B cell acute lymphoblastic leukemia {Kamps et al 1990}. 
+Meis1 was identified in 1995 as a proto-oncogene locus in which the ecotropic murine leukemia is inserted in BXH-2 mice {Moskow et al. 1995}. Homothorax was identified in {Rieckhof et al. 1997} as a Drosophila homolog of Meis1 required for Exd nuclear localization. 
+Prep1 was identified in 1198 as a component of the urokinase enhancer factor 3 capable of forming a DNA binding-independent heterodimer with Pbx1 {Berthelsen et al. 1998}.
 
-	2. philogeny: hoxes, tales
+	3. philogeny: hoxes, tales
 
-	3. structure of the TALE genes and proteins
+		{Bürglin 1994}
 
-	4. interactions
+	4. structure of the TALE genes and proteins
 
-	5. binding specifities
+	5. interactions
 
-	6. Functions, phenotypes:
+	6. binding specifities
 
-Intro to ChIP-seq
+	7. Functions, phenotypes:
+
+B) Intro to ChIP-seq
 
 	1. original description
 
