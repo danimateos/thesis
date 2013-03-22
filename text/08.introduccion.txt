@@ -19,7 +19,7 @@ A) Intro to TALEs and Hoxes
 
 	3. philogeny: hoxes, tales
 
-		The homeodomain is present in many genes other than Hoxes. Homologs of homodomain genes have been found as far from vertebrates as plants [Knotted, cual mas?, buscar algo: mirar Bürglin 1997]. Meis, Prep and Pbx are part of a subgroup of homeodomain proteins characterized by the presence in their homeodomain of a Three Aminoacid Loop Extension (TALE) that gives name to the class and is situated [between alpha-helices 2 and 3] {Bürglin 1994, Mukherjee and Bürglin 2007, Moens and Selleri 2006}
+		The homeodomain is present in many genes other than Hoxes. Homologs of homodomain genes have been found as far from vertebrates as plants [Knotted, cual mas?, buscar algo: mirar Bürglin 1997]. Meis, Prep and Pbx are part of a subgroup of homeodomain proteins characterized by the presence in their homeodomain of a Three Aminoacid Loop Extension (TALE) that gives name to the class and is situated between alpha-helices 1 and 2 [recheck] {Bürglin 1994, Mukherjee and Bürglin 2007, Moens and Selleri 2006}
 
 	4. structure of the TALE genes and proteins
 	
