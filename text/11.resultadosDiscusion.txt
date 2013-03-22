@@ -1,0 +1,58 @@
+A) cataloging, describing Meis, Prep, Pbx1 ChIP-seq peaks
+
+	1) #reads, sequencing, mapping info
+		Chromatin Immunoprecipitation was performed in the dissected trunks of embryonic stage E11.5 C57BL/6 mice.
+
+	2) Peak calling
+
+	3) Meis, Prep, Pbx1 overlap
+
+		- Triple peak Chip-reChip
+
+	4) Distance to TSSs
+
+	5) TSSA, IG, CI
+
+		- exon/intron Meis ratio is skewed, others not.
+
+	6) Conservation
+
+	7) histone marks
+
+
+B) Sequence analysis
+
+	1) Motif discovery stats, core motifs
+
+	2) distribution in different subsets
+
+	4) comparison with expected distribution of motifs.
+
+	5) Hox motif variants, distribution 
+
+	n) uncore motifs
+
+C) Transcriptional targets
+
+	1) #reads, sequencing, mapping info
+
+	2) attempting to correlate
+
+	3) logistical model (?)
+
+D) Hox Clusters
+
+	1) Distribution in the Hox clusters
+
+	2) AP ChIP
+
+	3) previously described reg sites
+
+	4) Hox RNAseq
+
+
+[por colocar:
+
+- comparacion detallada con Meis ChIP-seq hematop {Wilson et al. 20101, Huang et al. 2012}
+- Chip-proteomics
+]
