@@ -1,0 +1,39 @@
+
+Chromatin Immunoprecipitation
+
+	Sequencing
+
+	Alignment
+
+	Peak Calling
+
+ChIP-re-ChIP
+
+AP-ChIP
+
+	PCR conditions
+
+
+ChIP-chip [preguntar a Dima si lo puedo usar]
+
+RNA extraction
+
+	Sequencing
+
+	Alignment
+
+	Fold Change estimation
+	
+EMSA
+
+Alleles used for LOF
+
+ChIP proteomics
+
+Bioinformatics:
+
+	Motif Discovery, FIMO
+
+	Stats
+
+	
