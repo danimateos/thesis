@@ -1,24 +1,72 @@
 \chapter{Results \& Discussion}
-\label{chap:results}
+\label{chp:results}
 
 \section{Cataloging, describing Meis, Prep, Pbx1 ChIP-seq peaks}
 
 \subsection{\# reads, sequencing, mapping info}
 Chromatin Immunoprecipitation was performed in the dissected trunks of embryonic stage E11.5 C57BL/6 mice.
 
+
+
+
+
 \subsection{Peak calling}
 
+We used the PICS algorithm for calling peaks from read data.
+
 \subsection{Meis, Prep, Pbx1 overlap}
+
+5686 peaks were found for Meis, 3331 for Prep, and 3504 for Pbx1. The overlaps between these sets are represented in \ref{fig:peakOverlap}. The first conclusion from this analysis is that Meis and Pbx overlap much less than expected. 
+
+
+\begin{figure}[]
+  
+  \centering
+  \label{fig:peakOverlap}
+  \includegraphics[width=\textwidth]{figures/peakOverlap}
+  \caption[Overlap of Meis, Prep, and Pbx1 peaks]{Overlap of Meis, Prep, and Pbx1 peaks.  leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+\end{figure}
+
+
+
+
+
 
 \subsubsection{Triple peak Chip-reChip}
 
 \subsection{Distance to TSSs}
 
+The first step in the characterization of peaks was to find the \ac{TSS} nearest to each peak. The gene set we used for this and all following gene-centric analyses was Ensembl63, the latest version available at the time of mapping.
+
+Distance between peak and TSS was calculated using the TSS as position 0 and direction of transcription as + direction, in order to differentiate upstream and downstream peaks. Results are represented in figure \ref{fig:distanceHistogram}. We found a clear  concentration of peaks near TSSs for both Prep and Pbx1. Meis peaks, in contrast, show very little concentration near TSSs, and a much higher proportion of them is located at extreme distances from TSSs. 
+
+\begin{figure}[]
+  
+  \centering
+  \label{fig:distanceHistogram}
+  \includegraphics[width=\textwidth]{figures/distanceHistogram}
+  \caption[Distance From Peaks to TSSs]{Distance From Peaks to TSSs. leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+\end{figure}
+
+
 \subsection{TSSA, IG, CI}
+
+In order to understand better the interplay between peak overlap and distance to transcriptional units, we classified peaks into \ac{TSS}-Associated, \ac{IG}, \ac{CI} or Far Intergenic. 
+
+[comentar el pico en Prep entre 100 y 200]
+
 
 \subsubsection{exon/intron Meis ratio is skewed, others not.}
 
 \subsection{Conservation}
+
+\begin{figure}[]
+  
+  \centering
+  \label{fig:conservation}
+  \includegraphics[width=\textwidth]{figures/conservation}
+  \caption[Conservation Profile of Peaks]{Conservation Profile of Peaks. leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+\end{figure}
 
 \subsection{histone marks}
 
@@ -27,9 +75,29 @@ Chromatin Immunoprecipitation was performed in the dissected trunks of embryonic
 
 \subsection{Motif discovery stats, core motifs}
 
+
+
+
 \subsection{distribution in different subsets}
 
+\begin{figure}[]
+    \centering
+  \label{fig:coreMotifsFound}
+  \includegraphics[width=\textwidth]{{{figures/coreMotifs.found}}}
+  \caption["Core" Motifs Found in Peak subsets]{"Core" Motifs Found in Peak subsets. leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+
+\end{figure}
+
+
 \subsection{Comparison with expected distribution of motifs}
+
+\begin{figure}[]
+  
+  \centering
+  \label{fig:coreMotifsExpected}
+  \includegraphics[width=\textwidth]{{{figures/coreMotifs.expected}}}
+  \caption["Core" Motifs Expected in Peak subsets]{"Core" Motifs Expected in Peak subsets. leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+\end{figure}
 
 \subsection{Hox motif variants, distribution}
 

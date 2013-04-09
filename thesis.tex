@@ -2,11 +2,9 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,english]{babel}
-\usepackage{csquotes}
+\usepackage{csquotes, graphicx,amsmath,amsfonts,amssymb}
 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
+\usepackage[printonlyused]{acronym}
 
 \usepackage[style=authoryear]{biblatex} 
 \bibliography{Mateos2013.Tesis}
@@ -19,6 +17,10 @@
     linkcolor=black,
     urlcolor=black
 }
+
+\numberwithin{table}{chapter}
+\numberwithin{figure}{chapter}
+
 
 \author{Daniel Mateos San Martín}
 
@@ -42,6 +44,7 @@
 \include{text/13.conclusiones}
 
 \backmatter
+
 \include{text/14.bibliografia}
 \include{text/15.anexos}
 
