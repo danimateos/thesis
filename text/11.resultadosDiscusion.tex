@@ -24,7 +24,7 @@ We used the PICS algorithm for calling peaks from read data.
   \centering
   \label{fig:peakOverlap}
   \includegraphics[width=\textwidth]{figures/peakOverlap}
-  \caption[Overlap of Meis, Prep, and Pbx1 peaks]{Overlap of Meis, Prep, and Pbx1 peaks.  leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[Overlap of Meis, Prep, and Pbx1 peaks]{\textbf{Overlap of Meis, Prep, and Pbx1 peaks.}  leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
 \end{figure}
 
 
@@ -34,43 +34,89 @@ We used the PICS algorithm for calling peaks from read data.
 
 \subsubsection{Triple peak Chip-reChip}
 
-\subsection{Distance to TSSs}
+\subsection{Distance to \ac{TSS}s}
 
 The first step in the characterization of peaks was to find the \ac{TSS} nearest to each peak. The gene set we used for this and all following gene-centric analyses was Ensembl63, the latest version available at the time of mapping.
 
-Distance between peak and TSS was calculated using the TSS as position 0 and direction of transcription as + direction, in order to differentiate upstream and downstream peaks. Results are represented in figure \ref{fig:distanceHistogram}. We found a clear  concentration of peaks near TSSs for both Prep and Pbx1. Meis peaks, in contrast, show very little concentration near TSSs, and a much higher proportion of them is located at extreme distances from TSSs. 
+Distance between peak and \ac{TSS} was calculated using the \ac{TSS} as position 0 and direction of transcription as + direction, in order to differentiate upstream and downstream peaks. Results are represented in figure \ref{fig:distanceHistogram}. We found a clear  concentration of peaks near \ac{TSS}s for both Prep and Pbx1. Meis peaks, in contrast, show very little concentration near \ac{TSS}s, and a much higher proportion of them is located at extreme distances from \ac{TSS}s. 
 
 \begin{figure}[]
   
   \centering
   \label{fig:distanceHistogram}
   \includegraphics[width=\textwidth]{figures/distanceHistogram}
-  \caption[Distance From Peaks to TSSs]{Distance From Peaks to TSSs. leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[Distance From Peaks to \ac{TSS}s]{\textbf{Distance From Peaks to \ac{TSS}s.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
 \end{figure}
 
 
 \subsection{TSSA, IG, CI}
 
-In order to understand better the interplay between peak overlap and distance to transcriptional units, we classified peaks into \ac{TSS}-Associated, \ac{IG}, \ac{CI} or Far Intergenic. 
+In order to understand better the interplay between peak overlap and distance to transcriptional units, we classified peaks into \ac{TSSA}, \ac{IG}, \ac{CI} or \ac{FI}. The criteria for classification were based on the  distances represented in Figure \ref{fig:distanceHistogram}. Peaks located between -500 and +100 were considered to be \ac{TSSA}. Of the rest, those within the gene body were considered \ac{IG}. The peaks located in intergenic regions were divided into \ac{CI} (those outside the transcriptional unit but within 20kb of the nearest \ac{TSS}) and \ac{FI} (further than 20kb away from the nearest \ac{TSS}). 
+We chose 20kb for subdivision of the intergenic peaks because of the spread in peak densities between Meis and the other factor peaks, which is clearest at this distances. Another reason was the difficulty of assigning potential transcriptional targets to peaks that are, for example, 200kb away from the nearest \ac{TSS}.
+
+
+\begin{figure}[]
+  
+  \centering
+  \label{fig:distanceBarChart}
+  \includegraphics[width=\textwidth]{figures/barChart_TSSAIGCIFI}
+  \caption[Genomic location classes within each factor-binding profile category]{\textbf{Genomic location classes within each factor-binding profile category.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+\end{figure}
 
 [comentar el pico en Prep entre 100 y 200]
 
 
 \subsubsection{exon/intron Meis ratio is skewed, others not.}
 
+
+
+
 \subsection{Conservation}
+
+We analyzed the conservation profile of peaks. For this analysis, the peak summit was used as position 0 and the phastCons (\cite{Siepel2005}) score was averaged for equivalent positions of all peaks of each subset. PhastCons is a measure of phylogenetic conservation that varies between 0 and 1 and roughly represents the probability that a given base is a conserved element. Phastcons is estimated from a hidden Markov model based on multiple sequence alignments and is available precomputed in several genomic databases. The version we used was 30-vertebrate phastCons.
+
+The resulting profile shows that Prep and Pbx1 peaks have a high conservation value near the summit that tails off to genomic average values. The maximum conservation value and the profile are very similar to \acp{TSS} marked by \ac{PolII} peaks from \cite{Mahony2011}, which together with the previously mentioned high proportion of \ac{TSSA} peks within Prep and Pbx1 suggests a significant portion of these may be enhancers.
+
+Meis peaks have a much higher conservation profile, approaching genomic regions bound by p300 in the embryonic forebrain. These p300 peaks represent the most conserved enhancers (\cite{Blow2010}). The only other \ac{TF} peaks approaching this level of conservation that we have observed are, notably, those for HoxC9 in the embryonic spinal cord \cite{Jung2010}. Thus, genomic loci bound by Meis are both far way from \acp{TSS} and highly conserved, which strongly suggests functional relevance. In particular, they might be working as enhancers.
+
+[what does HoxA2 look like?] 
 
 \begin{figure}[]
   
   \centering
   \label{fig:conservation}
   \includegraphics[width=\textwidth]{figures/conservation}
-  \caption[Conservation Profile of Peaks]{Conservation Profile of Peaks. leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[Conservation Profile of Peaks]{\textbf{Conservation Profile of Peaks.} PhastCons values at each position from summit were averaged across all peaks in a subset and plotted. Peaks for Meis, Prep, and Pbx1 are from this study. Peaks for HoxC9 are from \cite{Jung2010}. Peaks for p300 in mouse embryonic forebrain were extracted from \cite{Blow2010}. Peaks for PolII are from \cite{Mahony2011}. Other TFs in grey are CEBPA and HNF4A (\cite{Schmidt2010}), RAR (\cite{Mahony2011}) and FLAG-tagged Meis1 and HoxA9 in a leukemia cell line (\cite{Huang2012}).}
 \end{figure}
+
+
+[meto los histogramas de valores de conservación para todo el pico?]
 
 \subsection{histone marks}
 
+In order to perform a test of this potential function of Meis \acp{BS} as enhancers, we checked their association with histone post-translational modifications. Different histone marks are associated with active and inactive promoters and enhancers, and can therefore be used to indicate chromatin state (\cite{Mikkelsen2007}). In particular, RNApolII\textsuperscript{+} H3K4Me3\textsuperscript{+} marks promoters,  H3K4Me1\textsuperscript{+} H3K4Me3\textsuperscript{-} marks enhancers and H3K4Me1\textsuperscript{+} H3K27Ac\textsuperscript{+} marks bivalent enhancers. 
 
+We took advantage of the extensive, high-quality epigenetic data generated by the Ren lab at LICR for the ENCODE project (\cite{Shen2012}). We chose the source tissue that most closely resembled our sample, \acp{MEF}. 
+
+For all three factor peaks, \ac{TSSA} peaks showed a high level of overlap with promoter epigenetic marks (between 43.8 and 58.6\% of all \ac{TSSA} peaks versus 0.38\% of the genome tagged RNApolII\textsuperscript{+} H3K4Me3\textsuperscript{+}). Only Prep non-\ac{TSSA} peaks showed high association with promoter marks (around 17\% for all other categories). Meis non-\ac{TSSA} peaks had low levels of coincidence (between 1.7 and 4.2\%) and Pbx1 non-\ac{TSSA} peaks had levels intermediate between those of Meis and Prep (between 5.6 and 9.8\%) (Figure \ref{fig:histoneMarks}a). Thus we conclude that \ac{TSSA} peaks likely represent \textit{bona fide} promoters. In addition, many non-\ac{TSSA} Prep peaks could in fact be either undescribed promoters or simply promoters not present in the gene catalogue we used.
+
+In contrast with promoter marks, enhancer (H3K4Me1\textsuperscript{+} H3K4Me3\textsuperscript{-}) and bivalent enhancer (H3K4Me1\textsuperscript{+} H3K27Ac\textsuperscript{+}) marks are much more associated with Meis peaks than with Prep or Pbx1 peaks. 25.5\% of Meis peaks bear enhancer marks versus 
+
+
+
+
+
+\begin{figure}[]
+  
+  \centering
+  \label{fig:histoneMarks}
+  \includegraphics[width=\textwidth]{figures/barChart_histoneMarks}
+  \caption[Histone Marks in Peak Subsets]{\textbf{Histone Marks in Peak Subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+\end{figure}
+
+
+ 
+ 
 \section{Sequence analysis}
 
 \subsection{Motif discovery stats, core motifs}
@@ -84,7 +130,7 @@ In order to understand better the interplay between peak overlap and distance to
     \centering
   \label{fig:coreMotifsFound}
   \includegraphics[width=\textwidth]{{{figures/coreMotifs.found}}}
-  \caption["Core" Motifs Found in Peak subsets]{"Core" Motifs Found in Peak subsets. leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption["Core" Motifs Found in Peak subsets]{\textbf{"Core" Motifs Found in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
 
 \end{figure}
 
@@ -96,7 +142,7 @@ In order to understand better the interplay between peak overlap and distance to
   \centering
   \label{fig:coreMotifsExpected}
   \includegraphics[width=\textwidth]{{{figures/coreMotifs.expected}}}
-  \caption["Core" Motifs Expected in Peak subsets]{"Core" Motifs Expected in Peak subsets. leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption["Core" Motifs Expected in Peak subsets]{\textbf{"Core" Motifs Expected in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
 \end{figure}
 
 \subsection{Hox motif variants, distribution}
