@@ -4,13 +4,21 @@
 \section{ChIP-seq}
 \subsection{Chromatin Immunoprecipitation}
 
-\subsection{Sequencing}
+Chromatin immunoprecipitations were performed using standard methods with anti-Prep1/2 antibody (N15, Santa Cruz Biotechnology, Santa Cruz, USA), anti-Pbx1 antibody (4342) (Cell signaling technology, Beverly, USA) and a mix of anti-Meis antibodies (K830, recognizing Meis1a and Meis2a isoforms, and K844, recognizing Meis1a and Meis1b isoforms; both produced at the CNIC, Madrid, Spain).
 
-\subsection{Alignment}
+A single-cell suspension was prepared from E11.5 mouse embryonic body trunks (total embryo without head, tail and legs) by crushing them against a cell strainer. Approximately 5x10\textsuperscript{7} cells were used for each immunoprecipitation. Cells were cross-linked in complete medium (10\% FBS) containing 1\% formaldehyde for 10 min, and the reaction was terminated by addition of 125 mM glycine. Fixed cells were washed three times (5 min each) in cold PBS and lysed in LB1 buffer containing 0.5\% NP-40 and 0.25\% triton X-100. Nuclei were then washed in LB2 buffer (containing 10mM Tris-HCl pH=8 and 200mM NaCl) to remove detergents and resuspended in LB3 buffer, containing 0.1\% Na-deoxycholate and 0.5\% N-lauroylsarcosine. Chromatin was sonicated by 5 x 30 sec cycles at 30\% of the maximum power of a Branson 450 sonicator to generate 100-400 bp chromatin fragments. After clearing by centrifugation, sonicated chromatin was incubated with antibody-bound protein A-conjugated magnetic beads (Invitrogen, Carlsbad, USA). For each IP we used 10 ug antibody. Rabbit IgG IP was performed as negative control. After overnight immunoprecipitation at 4$^\circ$C the bound complexes were washed twice in WB1 (50 mM Hepes-KOH pH 7.5, 140 mM NaCl, 1 mM EDTA, 1\% Triton-X100, 0.1\% Na-doexycholate), twice in WB2 (50 mM Hepes-KOH pH 7.5, 500 mM NaCl, 1 mM EDTA, 1\% Triton-X100, 0.1\% Na-doexycholate) and twice in LiCl WB (10 mM Tris-Cl pH 8.0, 250 mM LiCl, 0.5\% NP-40, 0.5\% Na-deoxycholate, 1 mM EDTA). Immunoprecipitated complexes were eluted from the beads by incubating for 30 min in EB (2\% SDS in TE) at 37$^\circ$C. The eluted material was reverse cross-linked at 65$^\circ$C overnight and incubated for 1 h at 55$^\circ$C with proteinase K. The obtained material was extracted with phenol-chloroform and ethanol-precipitated. After RNAse treatment, the DNA was purified with a PCR purification kit (Qiagen, Netherlands). About 10 ng of immunoprecipitated DNA were processed for sequencing.
+
+\subsection{Sequencing and Alignment}
+
+Chromatin-immunoprecipitated DNA was sequenced using an Illumina GAII analyzer. Single-end 36bp reads (~120M for Meis and ~40M for Prep) were first mapped with BWA software (\cite{Li2009}) against mm9 version of the mouse genome.
 
 \subsection{Peak Calling}
 
+Peak-calling was performed with the PICS algorithm (probabilistic inference for Chip-seq, \cite{Zhang2011}) was used to identify genomic regions with a high density of reads (peaks). These regions are an indicator of the enrichment of immunoprecipitated DNA fragments for the transcription factor (TF) of interest. PICS has been demonstrated to perform well against other peak-calling algorithms such as MACS (\cite{Zhang2008}) and CisGenome (\cite{Ji2011}).
+
 \section{ChIP-re-ChIP}
+
+For ChIP-reChIP the complexes were immunoprecipitated with anti-Pbx1 Ab, anti-Meis (a 1:1 mix of anti-Meis1 and anti-Meisa) Ab or rabbit IgG (negative control) and washed twice in WB1 and twice in WB2. They were then eluted from the beads by incubating for 30 min at 37 $^\circ$C in reChiP elution buffer (2\% SDS in TE supplemented with 15 mM DTT). The obtained material was diluted 20-fold in ChIP dilution buffer (0.01\% SDS, 1.1\% Triton X-100, 1.2 mM EDTA, 16.7 mM Tris–HCl, pH 8.0, 167 mM NaCl) and used for the second IP with anti-Pbx1, anti-Prep1/2, anti-Meis antibodies or rabbit IgG. The second immunoprecipitation was performed as described above. PCR amplification of target DNA peaks was conducted with the oligonucleotide 
 
 \section{AP-ChIP}
 
@@ -18,6 +26,8 @@
 
 
 \section{ChIP-chip [preguntar a Dima si lo puedo usar]}
+
+Chromatin immunoprecipitations of mouse thymocyte lysates were performed as described above with anti-Prep1/2 antibody (N15, Santa Cruz Biotechnology, Santa Cruz, USA) and anti-Pbx2 antibody (G20, Santa Cruz Biotechnology, Santa Cruz, USA). A single-cell suspension was prepared from thymuses from 6-8-wk-old mice (wt C57B6 strain) by crushing them against a cell strainer. Approximately 5x10\textsuperscript{7} cells were used for each immunoprecipitation. After immunoprecipitation and purification, DNA was amplified using a Whole Genome Amplification (WGA1) kit (Sigma-Aldrich, St-Louis, USA). About 3-5 ug of the amplified material was used to prepare the probe for hybridization to the Nimblegen mouse RefSeq promoter array (C4222-00-01)(Nimblegen-Roche, Germany). Probe preparation, hybridization reactions and data analysis were performed according to the manufacturer’s recommendations. Peak enrichment was analyzed by Model-based analysis of two-color arrays (MA2C) (cistrome.org) using the following parameters: bandwidth 300, max gap 250, min probes 5, threshold method P value, value, 10\textsuperscript{-6}, normalization method robust, C value 2, mm9 assembly.
 
 \section{RNA extraction}
 
@@ -36,5 +46,7 @@
 \section{Bioinformatics}
 
 \subsection{Motif Discovery, FIMO}
+
+For the identified peaks, \textit{de novo} motif discovery was run to identify consensus sequences enriched in the selected regions versus the whole genome using rGADEM (\cite{Li2009a}). While similar in its model to previous de novo motif finder algorithms such as MEME (\cite{Bailey2006}), GADEM performs better in large ChIP-seq experiments. Interestingly, rGADEM can identify dimer motifs located close to each other. The algorithm reports probability weight matrices (PWM) summarizing the consensus sequences identified in the peaks. (iii) We identified, interpreted and annotated de novo motifs using MotIV (motif identification and validation). MotIV compares the PWM of the identified de novo motifs with those in the JASPAR TF database (http://jaspar.genereg.net) and provides a significance level for the similarity. MotIV can furthermore report the distribution of distances between pairs of motifs and the percentage of co-localized motifs within the same peak, which might suggest cooperation between TFs. Steps (ii) and (iii) of the pipeline were run for the peaks identified for each TF separately and also for peaks found for two or more TFs. 
 
 \subsection{Stats}

@@ -103,7 +103,6 @@
   pages = {913--915},
   number = {8},
   month = {Apr},
-  __markedentry = {[dani:]},
   institution = {Biocenter, University of Basel, CH-4056 Basel, Switzerland. affolter@ubaclu.unibas.ch},
   keywords = {Animals; Biological Transport; Genes, Homeobox; Homeodomain Proteins,
 	metabolism; Humans},
@@ -168,6 +167,50 @@
   pmid = {15882575},
   timestamp = {2013.03.26},
   url = {http://dx.doi.org/10.1016/j.ydbio.2005.01.004}
+}
+
+@ARTICLE{Bailey2006,
+  author = {Bailey, Timothy L. and Williams, Nadya and Misleh, Chris and Li,
+	Wilfred W.},
+  title = {MEME: discovering and analyzing DNA and protein sequence motifs.},
+  journal = {Nucleic Acids Res},
+  year = {2006},
+  volume = {34},
+  pages = {W369--W373},
+  number = {Web Server issue},
+  month = {Jul},
+  __markedentry = {[dani:6]},
+  abstract = {MEME (Multiple EM for Motif Elicitation) is one of the most widely
+	used tools for searching for novel 'signals' in sets of biological
+	sequences. Applications include the discovery of new transcription
+	factor binding sites and protein domains. MEME works by searching
+	for repeated, ungapped sequence patterns that occur in the DNA or
+	protein sequences provided by the user. Users can perform MEME searches
+	via the web server hosted by the National Biomedical Computation
+	Resource (http://meme.nbcr.net) and several mirror sites. Through
+	the same web server, users can also access the Motif Alignment and
+	Search Tool to search sequence databases for matches to motifs encoded
+	in several popular formats. By clicking on buttons in the MEME output,
+	users can compare the motifs discovered in their input sequences
+	with databases of known motifs, search sequence databases for matches
+	to the motifs and display the motifs in various formats. This article
+	describes the freely accessible web server and its architecture,
+	and discusses ways to use MEME effectively to find new sequence patterns
+	in biological sequences and analyze their significance.},
+  doi = {10.1093/nar/gkl198},
+  institution = {Institute of Molecular Bioscience, The University of Queensland,
+	St Lucia, QLD 4072, Australia. t.bailey@imb.uq.edu.au},
+  keywords = {Amino Acid Motifs; Binding Sites; Internet; Protein Structure, Tertiary;
+	Sequence Alignment; Sequence Analysis, DNA, methods; Sequence Analysis,
+	Protein, methods; Software; Transcription Factors, metabolism; User-Computer
+	Interface},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pii = {34/suppl_2/W369},
+  pmid = {16845028},
+  timestamp = {2013.04.24},
+  url = {http://dx.doi.org/10.1093/nar/gkl198}
 }
 
 @ARTICLE{Bender1983,
@@ -1536,7 +1579,6 @@
   pages = {3636--3645},
   number = {10},
   month = {May},
-  __markedentry = {[dani:6]},
   abstract = {In the absence of MEIS family proteins, two mechanisms are known to
 	restrict the PBX family of homeodomain (HD) transcription factors
 	to the cytoplasm. First, PBX is actively exported from the nucleus
@@ -1673,6 +1715,39 @@
   owner = {dani},
   pmid = {10373562},
   timestamp = {2013.04.23}
+}
+
+@ARTICLE{Ji2011,
+  author = {Ji, Hongkai and Jiang, Hui and Ma, Wenxiu and Wong, Wing Hung},
+  title = {Using CisGenome to analyze ChIP-chip and ChIP-seq data.},
+  journal = {Curr Protoc Bioinformatics},
+  year = {2011},
+  volume = {Chapter 2},
+  pages = {Unit2.13},
+  month = {Mar},
+  abstract = {Chromatin immunoprecipitation (ChIP) coupled with genome tiling array
+	hybridization (ChIP-chip) and ChIP followed by massively parallel
+	sequencing (ChIP-seq) are high-throughput approaches to profiling
+	genome-wide protein-DNA interactions. Both technologies are increasingly
+	used to study transcription-factor binding sites and chromatin modifications.
+	CisGenome is an integrated software system for analyzing ChIP-chip
+	and ChIP-seq data. This unit describes basic functions of CisGenome
+	and how to use them to find genomic regions with protein-DNA interactions,
+	visualize binding signals, associate binding regions with nearby
+	genes, search for novel transcription-factor binding motifs, and
+	map existing DNA sequence motifs to user-supplied genomic regions
+	to define their exact locations.},
+  doi = {10.1002/0471250953.bi0213s33},
+  institution = {The Johns Hopkins University, Baltimore, Maryland, USA.},
+  keywords = {Base Sequence; Binding Sites; Chromatin Immunoprecipitation, methods;
+	Genome; Genomics, methods; Oligonucleotide Array Sequence Analysis,
+	methods; Sequence Analysis, DNA; Software},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pmid = {21400695},
+  timestamp = {2013.04.24},
+  url = {http://dx.doi.org/10.1002/0471250953.bi0213s33}
 }
 
 @ARTICLE{Joshi2007,
@@ -2072,6 +2147,102 @@
   keywords = {Abdomen/anatomy & histology/growth & development Animals Chromosome
 	Mapping Drosophila melanogaster/*genetics/growth & development Genes,
 	Regulator Mutation Thorax/anatomy & histology/growth & development}
+}
+
+@ARTICLE{Li2009,
+  author = {Li, Heng and Durbin, Richard},
+  title = {Fast and accurate short read alignment with Burrows-Wheeler transform.},
+  journal = {Bioinformatics},
+  year = {2009},
+  volume = {25},
+  pages = {1754--1760},
+  number = {14},
+  month = {Jul},
+  abstract = {The enormous amount of short reads generated by the new DNA sequencing
+	technologies call for the development of fast and accurate read alignment
+	programs. A first generation of hash table-based methods has been
+	developed, including MAQ, which is accurate, feature rich and fast
+	enough to align short reads from a single individual. However, MAQ
+	does not support gapped alignment for single-end reads, which makes
+	it unsuitable for alignment of longer reads where indels may occur
+	frequently. The speed of MAQ is also a concern when the alignment
+	is scaled up to the resequencing of hundreds of individuals.We implemented
+	Burrows-Wheeler Alignment tool (BWA), a new read alignment package
+	that is based on backward search with Burrows-Wheeler Transform (BWT),
+	to efficiently align short sequencing reads against a large reference
+	sequence such as the human genome, allowing mismatches and gaps.
+	BWA supports both base space reads, e.g. from Illumina sequencing
+	machines, and color space reads from AB SOLiD machines. Evaluations
+	on both simulated and real data suggest that BWA is approximately
+	10-20x faster than MAQ, while achieving similar accuracy. In addition,
+	BWA outputs alignment in the new standard SAM (Sequence Alignment/Map)
+	format. Variant calling and other downstream analyses after the alignment
+	can be achieved with the open source SAMtools software package.http://maq.sourceforge.net.},
+  doi = {10.1093/bioinformatics/btp324},
+  institution = {Wellcome Trust Sanger Institute, Wellcome Trust Genome Campus, Cambridge,
+	CB10 1SA, UK.},
+  keywords = {Algorithms; Genomics, methods; Sequence Alignment, methods; Sequence
+	Analysis, DNA, methods; Software},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pii = {btp324},
+  pmid = {19451168},
+  timestamp = {2013.04.24},
+  url = {http://dx.doi.org/10.1093/bioinformatics/btp324}
+}
+
+@ARTICLE{Li2009a,
+  author = {Li, Leping},
+  title = {GADEM: a genetic algorithm guided formation of spaced dyads coupled
+	with an EM algorithm for motif discovery.},
+  journal = {J Comput Biol},
+  year = {2009},
+  volume = {16},
+  pages = {317--329},
+  number = {2},
+  month = {Feb},
+  __markedentry = {[dani:]},
+  abstract = {Genome-wide analyses of protein binding sites generate large amounts
+	of data; a ChIP dataset might contain 10,000 sites. Unbiased motif
+	discovery in such datasets is not generally feasible using current
+	methods that employ probabilistic models. We propose an efficient
+	method, GADEM, which combines spaced dyads and an expectation-maximization
+	(EM) algorithm. Candidate words (four to six nucleotides) for constructing
+	spaced dyads are prioritized by their degree of overrepresentation
+	in the input sequence data. Spaced dyads are converted into starting
+	position weight matrices (PWMs). GADEM then employs a genetic algorithm
+	(GA), with an embedded EM algorithm to improve starting PWMs, to
+	guide the evolution of a population of spaced dyads toward one whose
+	entropy scores are more statistically significant. Spaced dyads whose
+	entropy scores reach a pre-specified significance threshold are declared
+	motifs. GADEM performed comparably with MEME on 500 sets of simulated
+	"ChIP" sequences with embedded known P53 binding sites. The major
+	advantage of GADEM is its computational efficiency on large ChIP
+	datasets compared to competitors. We applied GADEM to six genome-wide
+	ChIP datasets. Approximately, 15 to 30 motifs of various lengths
+	were identified in each dataset. Remarkably, without any prior motif
+	information, the expected known motif (e.g., P53 in P53 data) was
+	identified every time. GADEM discovered motifs of various lengths
+	(6-40 bp) and characteristics in these datasets containing from 0.5
+	to >13 million nucleotides with run times of 5 to 96 h. GADEM can
+	be viewed as an extension of the well-known MEME algorithm and is
+	an efficient tool for de novo motif discovery in large-scale genome-wide
+	data. The GADEM software is available at (www.niehs.nih.gov/research/resources/software/GADEM/).},
+  doi = {10.1089/cmb.2008.16TT},
+  institution = {Biostatistics Branch, National Institute of Environmental Health
+	Sciences, NIH, Research Triangle Park, NC 27709, USA. li3@niehs.nih.gov},
+  keywords = {Algorithms; Amino Acid Motifs, genetics; Base Sequence; Cell Line;
+	Chromatin Immunoprecipitation; Computational Biology, methods; Databases,
+	Genetic; Genome; Humans; Models, Genetic; Models, Statistical; Molecular
+	Sequence Data; Sequence Homology, Amino Acid; Software},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pii = {10.1089/cmb.2008.16TT},
+  pmid = {19193149},
+  timestamp = {2013.04.24},
+  url = {http://dx.doi.org/10.1089/cmb.2008.16TT}
 }
 
 @ARTICLE{Longobardi2010,
@@ -4115,5 +4286,89 @@
   keywords = {Animals Cell Line Gene Expression Regulation/*genetics *Genome Genome-Wide
 	Association Study Mice Stem Cells/*metabolism Transcription Factors/*genetics
 	Transcription, Genetic/*genetics}
+}
+
+@ARTICLE{Zhang2011,
+  author = {Zhang, Xuekui and Robertson, Gordon and Krzywinski, Martin and Ning,
+	Kaida and Droit, Arnaud and Jones, Steven and Gottardo, Raphael},
+  title = {PICS: probabilistic inference for ChIP-seq.},
+  journal = {Biometrics},
+  year = {2011},
+  volume = {67},
+  pages = {151--163},
+  number = {1},
+  month = {Mar},
+  abstract = {ChIP-seq combines chromatin immunoprecipitation with massively parallel
+	short-read sequencing. While it can profile genome-wide in vivo transcription
+	factor-DNA association with higher sensitivity, specificity, and
+	spatial resolution than ChIP-chip, it poses new challenges for statistical
+	analysis that derive from the complexity of the biological systems
+	characterized and from variability and biases in its sequence data.
+	We propose a method called PICS (Probabilistic Inference for ChIP-seq)
+	for identifying regions bound by transcription factors from aligned
+	reads. PICS identifies binding event locations by modeling local
+	concentrations of directional reads, and uses DNA fragment length
+	prior information to discriminate closely adjacent binding events
+	via a Bayesian hierarchical t-mixture model. It uses precalculated,
+	whole-genome read mappability profiles and a truncated t-distribution
+	to adjust binding event models for reads that are missing due to
+	local genome repetitiveness. It estimates uncertainties in model
+	parameters that can be used to define confidence regions on binding
+	event locations and to filter estimates. Finally, PICS calculates
+	a per-event enrichment score relative to a control sample, and can
+	use a control sample to estimate a false discovery rate. Using published
+	GABP and FOXA1 data from human cell lines, we show that PICS' predicted
+	binding sites were more consistent with computationally predicted
+	binding motifs than the alternative methods MACS, QuEST, CisGenome,
+	and USeq. We then use a simulation study to confirm that PICS compares
+	favorably to these methods and is robust to model misspecification.},
+  doi = {10.1111/j.1541-0420.2010.01441.x},
+  institution = {Department of Statistics, University of British Columbia, Vancouver,
+	BC, Canada.},
+  keywords = {Algorithms; Base Sequence; Chromatin Immunoprecipitation, methods;
+	Computer Simulation; DNA, genetics; Models, Genetic; Models, Statistical;
+	Molecular Sequence Data; Sequence Alignment, methods; Sequence Analysis,
+	DNA, methods},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pii = {BIOM1441},
+  pmid = {20528864},
+  timestamp = {2013.04.24},
+  url = {http://dx.doi.org/10.1111/j.1541-0420.2010.01441.x}
+}
+
+@ARTICLE{Zhang2008,
+  author = {Zhang, Yong and Liu, Tao and Meyer, Clifford A. and Eeckhoute, Jérôme
+	and Johnson, David S. and Bernstein, Bradley E. and Nusbaum, Chad
+	and Myers, Richard M. and Brown, Myles and Li, Wei and Liu, X Shirley},
+  title = {Model-based analysis of ChIP-Seq (MACS).},
+  journal = {Genome Biol},
+  year = {2008},
+  volume = {9},
+  pages = {R137},
+  number = {9},
+  abstract = {We present Model-based Analysis of ChIP-Seq data, MACS, which analyzes
+	data generated by short read sequencers such as Solexa's Genome Analyzer.
+	MACS empirically models the shift size of ChIP-Seq tags, and uses
+	it to improve the spatial resolution of predicted binding sites.
+	MACS also uses a dynamic Poisson distribution to effectively capture
+	local biases in the genome, allowing for more robust predictions.
+	MACS compares favorably to existing ChIP-Seq peak-finding algorithms,
+	and is freely available.},
+  doi = {10.1186/gb-2008-9-9-r137},
+  institution = {Department of Biostatistics and Computational Biology, Dana-Farber
+	Cancer Institute and Harvard School of Public Health, Boston, MA
+	02115, USA.},
+  keywords = {Algorithms; Cell Line, Tumor; Chromatin Immunoprecipitation, methods;
+	Hepatocyte Nuclear Factor 3-alpha, analysis/genetics; Humans; Models,
+	Genetic; Oligonucleotide Array Sequence Analysis, methods},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pii = {gb-2008-9-9-r137},
+  pmid = {18798982},
+  timestamp = {2013.04.24},
+  url = {http://dx.doi.org/10.1186/gb-2008-9-9-r137}
 }
 
