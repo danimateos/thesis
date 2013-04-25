@@ -113,6 +113,39 @@
   timestamp = {2013.04.24}
 }
 
+@ARTICLE{Anders2010,
+  author = {Anders, Simon and Huber, Wolfgang},
+  title = {Differential expression analysis for sequence count data.},
+  journal = {Genome Biol},
+  year = {2010},
+  volume = {11},
+  pages = {R106},
+  number = {10},
+  abstract = {High-throughput sequencing assays such as RNA-Seq, ChIP-Seq or barcode
+	counting provide quantitative readouts in the form of count data.
+	To infer differential signal in such data correctly and with good
+	statistical power, estimation of data variability throughout the
+	dynamic range and a suitable error model are required. We propose
+	a method based on the negative binomial distribution, with variance
+	and mean linked by local regression and present an implementation,
+	DESeq, as an R/Bioconductor package.},
+  doi = {10.1186/gb-2010-11-10-r106},
+  institution = {European Molecular Biology Laboratory, Mayerhofstraße 1, 69117 Heidelberg,
+	Germany. sanders@fs.tum.de},
+  keywords = {Animals; Binomial Distribution; Chromatin Immunoprecipitation, methods;
+	Computational Biology, methods; Drosophila, genetics; Gene Expression
+	Profiling, methods; High-Throughput Nucleotide Sequencing, methods;
+	Linear Models; Models, Genetic; Saccharomyces cerevisiae, genetics;
+	Sequence Analysis, RNA, methods; Stem Cells; Tissue Culture Techniques},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pii = {gb-2010-11-10-r106},
+  pmid = {20979621},
+  timestamp = {2013.04.25},
+  url = {http://dx.doi.org/10.1186/gb-2010-11-10-r106}
+}
+
 @ARTICLE{Azcoitia2005,
   author = {Azcoitia, Valeria and Aracil, Miguel and Martínez-A, Carlos and Torres,
 	Miguel},
@@ -169,6 +202,52 @@
   url = {http://dx.doi.org/10.1016/j.ydbio.2005.01.004}
 }
 
+@ARTICLE{Bailey2009,
+  author = {Bailey, Timothy L. and Boden, Mikael and Buske, Fabian A. and Frith,
+	Martin and Grant, Charles E. and Clementi, Luca and Ren, Jingyuan
+	and Li, Wilfred W. and Noble, William S.},
+  title = {MEME SUITE: tools for motif discovery and searching.},
+  journal = {Nucleic Acids Res},
+  year = {2009},
+  volume = {37},
+  pages = {W202--W208},
+  number = {Web Server issue},
+  month = {Jul},
+  abstract = {The MEME Suite web server provides a unified portal for online discovery
+	and analysis of sequence motifs representing features such as DNA
+	binding sites and protein interaction domains. The popular MEME motif
+	discovery algorithm is now complemented by the GLAM2 algorithm which
+	allows discovery of motifs containing gaps. Three sequence scanning
+	algorithms--MAST, FIMO and GLAM2SCAN--allow scanning numerous DNA
+	and protein sequence databases for motifs discovered by MEME and
+	GLAM2. Transcription factor motifs (including those discovered using
+	MEME) can be compared with motifs in many popular motif databases
+	using the motif database scanning algorithm TOMTOM. Transcription
+	factor motifs can be further analyzed for putative function by association
+	with Gene Ontology (GO) terms using the motif-GO term association
+	tool GOMO. MEME output now contains sequence LOGOS for each discovered
+	motif, as well as buttons to allow motifs to be conveniently submitted
+	to the sequence and motif database scanning algorithms (MAST, FIMO
+	and TOMTOM), or to GOMO, for further analysis. GLAM2 output similarly
+	contains buttons for further analysis using GLAM2SCAN and for rerunning
+	GLAM2 with different parameters. All of the motif-based tools are
+	now implemented as web services via Opal. Source code, binaries and
+	a web server are freely available for noncommercial use at http://meme.nbcr.net.},
+  doi = {10.1093/nar/gkp335},
+  institution = {Institute for Molecular Bioscience, University of Queensland, Brisbane,
+	Queensland, Australia. t.bailey@imb.uq.edu.au},
+  keywords = {Algorithms; Binding Sites; Databases, Genetic; Internet; Regulatory
+	Elements, Transcriptional; Sequence Analysis, DNA; Sequence Analysis,
+	Protein; Software; Transcription Factors, metabolism},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pii = {gkp335},
+  pmid = {19458158},
+  timestamp = {2013.04.25},
+  url = {http://dx.doi.org/10.1093/nar/gkp335}
+}
+
 @ARTICLE{Bailey2006,
   author = {Bailey, Timothy L. and Williams, Nadya and Misleh, Chris and Li,
 	Wilfred W.},
@@ -179,7 +258,6 @@
   pages = {W369--W373},
   number = {Web Server issue},
   month = {Jul},
-  __markedentry = {[dani:6]},
   abstract = {MEME (Multiple EM for Motif Elicitation) is one of the most widely
 	used tools for searching for novel 'signals' in sets of biological
 	sequences. Applications include the discovery of new transcription
@@ -2149,6 +2227,59 @@
 	Regulator Mutation Thorax/anatomy & histology/growth & development}
 }
 
+@ARTICLE{Li2011,
+  author = {Li, Bo and Dewey, Colin N.},
+  title = {RSEM: accurate transcript quantification from RNA-Seq data with or
+	without a reference genome.},
+  journal = {BMC Bioinformatics},
+  year = {2011},
+  volume = {12},
+  pages = {323},
+  abstract = {RNA-Seq is revolutionizing the way transcript abundances are measured.
+	A key challenge in transcript quantification from RNA-Seq data is
+	the handling of reads that map to multiple genes or isoforms. This
+	issue is particularly important for quantification with de novo transcriptome
+	assemblies in the absence of sequenced genomes, as it is difficult
+	to determine which transcripts are isoforms of the same gene. A second
+	significant issue is the design of RNA-Seq experiments, in terms
+	of the number of reads, read length, and whether reads come from
+	one or both ends of cDNA fragments.We present RSEM, an user-friendly
+	software package for quantifying gene and isoform abundances from
+	single-end or paired-end RNA-Seq data. RSEM outputs abundance estimates,
+	95\% credibility intervals, and visualization files and can also
+	simulate RNA-Seq data. In contrast to other existing tools, the software
+	does not require a reference genome. Thus, in combination with a
+	de novo transcriptome assembler, RSEM enables accurate transcript
+	quantification for species without sequenced genomes. On simulated
+	and real data sets, RSEM has superior or comparable performance to
+	quantification methods that rely on a reference genome. Taking advantage
+	of RSEM's ability to effectively use ambiguously-mapping reads, we
+	show that accurate gene-level abundance estimates are best obtained
+	with large numbers of short single-end reads. On the other hand,
+	estimates of the relative frequencies of isoforms within single genes
+	may be improved through the use of paired-end reads, depending on
+	the number of possible splice forms for each gene.RSEM is an accurate
+	and user-friendly software tool for quantifying transcript abundances
+	from RNA-Seq data. As it does not rely on the existence of a reference
+	genome, it is particularly useful for quantification with de novo
+	transcriptome assemblies. In addition, RSEM has enabled valuable
+	guidance for cost-efficient design of quantification experiments
+	with RNA-Seq, which is currently relatively expensive.},
+  doi = {10.1186/1471-2105-12-323},
+  institution = {Department of Computer Sciences, University of Wisconsin-Madison,
+	Madison, WI, USA.},
+  keywords = {Animals; Computer Simulation; Gene Expression Profiling, methods;
+	Humans; Mice; Protein Isoforms, genetics; RNA, genetics; Sequence
+	Analysis, RNA, methods; Software},
+  language = {eng},
+  medline-pst = {epublish},
+  owner = {dani},
+  pii = {1471-2105-12-323},
+  pmid = {21816040},
+  timestamp = {2013.04.25},
+  url = {http://dx.doi.org/10.1186/1471-2105-12-323}
+}
+
 @ARTICLE{Li2009,
   author = {Li, Heng and Durbin, Richard},
   title = {Fast and accurate short read alignment with Burrows-Wheeler transform.},
@@ -2202,7 +2333,6 @@
   pages = {317--329},
   number = {2},
   month = {Feb},
-  __markedentry = {[dani:]},
   abstract = {Genome-wide analyses of protein binding sites generate large amounts
 	of data; a ChIP dataset might contain 10,000 sites. Unbiased motif
 	discovery in such datasets is not generally feasible using current
@@ -2243,6 +2373,46 @@
   pmid = {19193149},
   timestamp = {2013.04.24},
   url = {http://dx.doi.org/10.1089/cmb.2008.16TT}
+}
+
+@ARTICLE{Liu2011,
+  author = {Liu, Tao and Ortiz, Jorge A. and Taing, Len and Meyer, Clifford A.
+	and Lee, Bernett and Zhang, Yong and Shin, Hyunjin and Wong, Swee
+	S. and Ma, Jian and Lei, Ying and Pape, Utz J. and Poidinger, Michael
+	and Chen, Yiwen and Yeung, Kevin and Brown, Myles and Turpaz, Yaron
+	and Liu, X Shirley},
+  title = {Cistrome: an integrative platform for transcriptional regulation
+	studies.},
+  journal = {Genome Biol},
+  year = {2011},
+  volume = {12},
+  pages = {R83},
+  number = {8},
+  __markedentry = {[dani:6]},
+  abstract = {The increasing volume of ChIP-chip and ChIP-seq data being generated
+	creates a challenge for standard, integrative and reproducible bioinformatics
+	data analysis platforms. We developed a web-based application called
+	Cistrome, based on the Galaxy open source framework. In addition
+	to the standard Galaxy functions, Cistrome has 29 ChIP-chip- and
+	ChIP-seq-specific tools in three major categories, from preliminary
+	peak calling and correlation analyses to downstream genome feature
+	association, gene expression analyses, and motif discovery. Cistrome
+	is available at http://cistrome.org/ap/.},
+  doi = {10.1186/gb-2011-12-8-r83},
+  institution = {Department of Biostatistics and Computational Biology, Dana-Farber
+	Cancer Institute and Harvard School of Public Health, Boston, MA
+	02215, USA.},
+  keywords = {Chromatin Immunoprecipitation, methods; Computational Biology, methods;
+	Databases, Genetic; Gene Expression Regulation; Humans; Internet;
+	Oligonucleotide Array Sequence Analysis, methods; Software; Transcription
+	Factors, genetics/metabolism},
+  language = {eng},
+  medline-pst = {epublish},
+  owner = {dani},
+  pii = {gb-2011-12-8-r83},
+  pmid = {21859476},
+  timestamp = {2013.04.25},
+  url = {http://dx.doi.org/10.1186/gb-2011-12-8-r83}
 }
 
 @ARTICLE{Longobardi2010,
@@ -3822,6 +3992,41 @@
   pmid = {22763441},
   timestamp = {2013.04.09},
   url = {http://dx.doi.org/10.1038/nature11243}
+}
+
+@ARTICLE{Shin2009,
+  author = {Shin, Hyunjin and Liu, Tao and Manrai, Arjun K. and Liu, X Shirley},
+  title = {CEAS: cis-regulatory element annotation system.},
+  journal = {Bioinformatics},
+  year = {2009},
+  volume = {25},
+  pages = {2605--2606},
+  number = {19},
+  month = {Oct},
+  __markedentry = {[dani:]},
+  abstract = {We present a tool designed to characterize genome-wide protein-DNA
+	interaction patterns from ChIP-chip and ChIP-Seq data. This stand-alone
+	extension of our web application CEAS (cis-regulatory element annotation
+	system) provides summary statistics on ChIP enrichment in important
+	genomic regions such as individual chromosomes, promoters, gene bodies
+	or exons, and infers the genes most likely to be regulated by the
+	binding factor under study. CEAS also enables biologists to visualize
+	the average ChIP enrichment signals over specific genomic regions,
+	particularly allowing observation of continuous and broad ChIP enrichment
+	that might be too subtle to detect from ChIP peaks alone. AVAILABILITY:
+	The CEAS Python package is publicly available at http://liulab.dfci.harvard.edu/CEAS.},
+  doi = {10.1093/bioinformatics/btp479},
+  institution = {Department of Biostatistics and Computational Biology, Dana-Farber
+	Cancer Institute, 44 Binney St, Boston, MA 02115, USA.},
+  keywords = {Computational Biology, methods; Databases, Genetic; Genome; Regulatory
+	Sequences, Nucleic Acid, genetics; Software},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {dani},
+  pii = {btp479},
+  pmid = {19689956},
+  timestamp = {2013.04.25},
+  url = {http://dx.doi.org/10.1093/bioinformatics/btp479}
 }
 
 @ARTICLE{Siepel2005,
