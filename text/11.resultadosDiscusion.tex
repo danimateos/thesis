@@ -146,23 +146,52 @@ In contrast with promoter marks, enhancer (H3K4Me1\textsuperscript{+} H3K4Me3\te
  
 \section{Sequence analysis}
 
-\subsection{Motif discovery stats, core motifs}
+Beyond the genomic location of the \acp{BS} of our factors of interest, we sought to characterize the sequences they select \textit{in vivo}, and then contrast the preferences of each factor and compare them to their \textit{in vitro} behaviour. 
 
+\subsection{Motif discovery}
 
+We performed motif discovery on the peak sequences. In short, motif discovery is a way to discover short sequences that are more frequent in a sequence dataset than would be expected by chance. We used the rGADEM software, an implementation of the GADEM (\cite{Li2009a}) algorithm in the R statistical computing language that integrates smoothly with \ac{PICS} and produces a detailed and readable output.
 
+We ran rGADEM [parameters] on the sequence of non-overlapping subsets of peaks defined by their factor combination: \ac{meise},\ac{prepe}, \ac{pbxe}, \ac{mepr}, \ac{mepb}, \ac{mepr} and triple peaks, separately. The results are shown in Figure \ref{fig:allMotifs}.
 
-\subsection{distribution in different subsets}
+\subsection{Core versus Accessory Motifs}
 
 \begin{figure}[]
     \centering
-  \label{fig:coreMotifsFound}
-  \includegraphics[width=\textwidth]{{{figures/coreMotifs.found}}}
-  \caption["Core" Motifs Found in Peak subsets]{\textbf{"Core" Motifs Found in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
-
+  \label{fig:allMotifs}
+  \includegraphics[width=.5\textwidth]{figures/allMotifs}
+  \caption[All Motifs Found in Peak subsets]{\textbf{All Motifs Found in Peak subsets.} Sequence logos for every motif found in each non-overlapping peak subset. "Core" motifs labelled in red. The logos resulting from the motif definitions (\acp{PSSM}) which we selected as canonical and used for directed motif search are highlighted in grey. The histograms to the right of the sequence logo show the distribution of motif positions with respect to the summit of the peak.}
 \end{figure}
 
+The representation of motif distances to the peak summit shows a fairly clear distinction between two different motif classes: "core" motifs that tend to be located near the summit of the peak and therefore shown a unimodal distance distribution, and "accessory" motifs that are depleted near the summit of the peak and thus show a bimodal distribution. 
 
-\subsection{Comparison with expected distribution of motifs}
+Core motifs are likely to be \textit{bona fide} factor recognition sequences. The fact that they tend to be located at or close to the maximum confidence point for factor binding, the summit, suggests that they are directly responsible for this binding.
+
+In contrast, the role in factor binding, if there is one, of accessory motifs is less intuitive. A number of interpretations can explain their higher than expected by chance association with peaks. Accessory motifs might represent \acp{BS} for cofactors that collaborate in the binding. Alternatively, they could represent local DNA compositional biases that facilitate the binding of the factors without interacting with them, for example by imparting a certain curvature or groove topology to the stretch of DNA. They might also be simply artifacts: if a subset of peaks is located preferentially in genomic regions with particular DNA sequence characteristics, one would expect those characteristics to be reflected in the results of motif discovery, although they might not have a direct effect on factor binding.
+
+
+[motif discovery on promoter peaks regardless of factor: is there any particular motif that shows up?]
+
+
+\subsection{Core Motifs}
+
+Most of the core motifs we found are immediately recognizable from the literature on Hox cofactor DNA binding preferences and were present in several peak subsets. The motif we call \ac{HEXA} corresponds to the canonical monomeric Meis/Prep \ac{BS} and is present in the \ac{meise} and \ac{mepb} subsets, but surprisingly not in the \ac{prepe} subset. The \ac{OCTA} fits the well-known Pbx-Hox heterodimeric \ac{BS} and is present in all subsets with Meis binding, even in those peaks in which we have not found evidence of Pbx binding, such as \ac{meise} and \ac{mepr}. The \ac{DECA} clearly resembles a heterodimeric Pbx-Meis or Pbx-Prep \ac{BS} with a 5' TGAT Pbx half and a 3' Prep/Meis TGACAG half. We found an additional previously unreported bipartite motif that contains a \ac{DECA} and a CCAAT sequence at a fixed distance, which we have called \ac{DECAEXT}. \ac{DECAEXT} only appears in motif discovery on \ac{pbpr} peaks. In \ac{pbxe} peaks we only found one poorly defined core motif that did not match any found in the literature, but might be related to accessory motifs found in other subsets (see below). Because of its poor definition, we discarded it from further analysis.
+
+\subsection{Accessory Motifs}
+\label{ssc:accessoryMotifs}
+
+Several intriguing sequences appear as accessory motifs. All subsets show variants of an unstructured sequence composed of Gs and As in no particular order: motif 4 in \ac{meise}, 3 and 4 in \ac{prepe}, 5 in \ac{pbxe}, 3 in \ac{mepb}, 5 in \ac{mepb}, 4 in \ac{pbpr}, 3 and 4 in triple peaks. It is interesting to note that this represents DNA stretches in which one strand is exclusively populated by purines and the complementary strand is only populated by pyrimidines. Poly-purine tracts have been shown to be able to form DNA triple helical structures \textit{in vitro} (\cite{ref}), to be implicated in splicing (\cite{ref}), and are a known component of retroviruses (\cite{ref})[completar, explorar, fill refs].
+
+Variants of a CTGnCTG sequence appear in many of the subsets. In \ac{meise} peaks, motifs 3 and 5 to 8 all fit this consensus, as do motifs 1, 3 and 6 from \ac{pbxe} peaks. In the \ac{mepb} subset, motif 6 and the reverse complement of motif 4 could represent variants of this consensus. This motif was found in a previous report (\cite{ref?}) and described as an "E-box like" motif. E-boxes are binding sites for \ac{BHLH} proteins.[roles of bHLH proteins, E-boxes, the reference]
+
+Another of the accessory motifs appeared in several subsets and has suggestive connections in the literature. a (C)$_n$N(C)$_n$ motif where n is between 3 and 4 appears in the \ac{prepe}, \ac{mepb} and \ac{pbpr} subsets. It is very similar to the known Sp1 binding site (GGGGnGGGG, \cite{ref}). Sp1 is [leer, completar]
+
+\subsection{Comparison with Expected Distribution of Motifs}
+
+Going forward, we focused on the core motifs. Their distribution across the subsets defined by \ac{TALE} protein binding was extremely surprising. 
+
+Our \textit{a priori} expectation for the distribution of motifs is represented in Figure \ref{fig:coreMotifsExpected}. We expected the \ac{HEXA} motif to be prevalent in all subsets in which no Pbx1 was detected to be present: \ac{meise}, \ac{prepe}, and \ac{mepr}. We expected the \ac{OCTA} motif to be present in all subsets with Pbx1 binding, and the DECA motif to be present in the intersection of Meis/Prep with Pbx1.
+
 
 \begin{figure}[]
   
@@ -172,11 +201,35 @@ In contrast with promoter marks, enhancer (H3K4Me1\textsuperscript{+} H3K4Me3\te
   \caption["Core" Motifs Expected in Peak subsets]{\textbf{"Core" Motifs Expected in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
 \end{figure}
 
+However, the actual results (summarised in Figure \ref{fig:coreMotifsFound}) diverged from our expectations. We found that the \ac{OCTA} motif is present in all Meis-positive subsets, included those that are Pbx1-negative. The \ac{DECA} motif, conversely, is present in all Prep-positive subsets, even in those that show no evidence of Pbx1 binding. \ac{HEXA} appears in both \ac{meise} and \ac{mepb}, but not in any Prep-positive subset. 
+
+\begin{figure}[]
+    \centering
+  \label{fig:coreMotifsFound}
+  \includegraphics[width=\textwidth]{{{figures/coreMotifs.found}}}
+  \caption["Core" Motifs Found in Peak subsets]{\textbf{"Core" Motifs Found in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+\end{figure}
+
+
+\subsection{Motif Frequencies}
+
+Motif discovery is a form of undirected search. Once having the motif definitions, we performed a directed search using the FIMO program from the MEME suite. Directed search can reveal the presence of motifs in subsets were they are present but not frequent enough to be detected by motif discovery. It also allows us to quantify motif frequencies.
+
+The results are represented in Figure \ref{fig:coreMotifFreqs}. \ac{HEXA} is most frequent in \ac{mepr} peaks.  
+
+\begin{figure}[]
+  
+  \centering
+  \label{fig:coreMotifFreqs}
+  \includegraphics[width=\textwidth]{figures/barChart_coreMotifFreqs}
+  \caption[Core Motif Frequency in Peak Subsets]{\textbf{Core Motif Frequency in Peak Subsets.} Percentage of peaks in each factor binding category that contain each core motif. ALL = total non-redundant genomic sites. Pr = \ac{prepe}, M = \ac{meise}, P = \ac{pbxe}, Pr-M = \ac{mepr}, Pr-P = \ac{pbpr}, M-P = \ac{mepb}, Pr-M-P = triple peaks.}
+\end{figure}
+
+
+
 \subsection{Hox motif variants, distribution}
 
 [can we guess the preferred hoxs for Meis based on the distribution of target sequences?]
-
-\subsection{uncore motifs}
 
 \section{Transcriptional targets}
 
