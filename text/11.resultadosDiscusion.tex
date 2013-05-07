@@ -215,7 +215,7 @@ However, the actual results (summarised in Figure \ref{fig:coreMotifsFound}) div
 
 Motif discovery is a form of undirected search. Once having the motif definitions, we performed a directed search using the FIMO program from the MEME suite. Directed search can reveal the presence of motifs in subsets were they are present but not frequent enough to be detected by motif discovery. It also allows us to quantify motif frequencies.
 
-The results are represented in Figure \ref{fig:coreMotifFreqs}. \ac{HEXA} is most frequent in \ac{mepr} peaks.  
+The results are represented in Figure \ref{fig:coreMotifFreqs}. \ac{HEXA} is most frequent in \ac{mepr} peaks, but it is not the most frequent core motif in any peak subset. \ac{OCTA} is the most frequent core motif in \ac{meise} peaks, in triple peaks and in \ac{mepb} peaks, where it is present in over 50\% of the peaks. \ac{DECA} and \ac{DECAEXT} are very frequent in all subsets where Prep is involved. This is espcially marked in \ac{pbpr} peaks, where \ac{HEXA} and \ac{OCTA} are present in under 10\% of peaks but  \ac{DECAEXT} is present in over 70\% of the peaks. In general, Meis peaks tend to be \ac{OCTA}-positive and to a lesser extent \ac{HEXA}-positive and Prep peaks tend to be \ac{DECA}- or \ac{DECAEXT}-positive, and this tendencies are exacerbated by co-binding with Pbx1. 
 
 \begin{figure}[]
   
@@ -226,10 +226,33 @@ The results are represented in Figure \ref{fig:coreMotifFreqs}. \ac{HEXA} is mos
 \end{figure}
 
 
+\subsection{OCTA Motif Variants}
 
-\subsection{Hox motif variants, distribution}
+The \ac{OCTA} motif, which we hypothesize represents binding sites for Hox proteins, is an eight-nucleotide sequence with high variability in positions 5 and 6. Some of the 16 possible matches have been shown to be able to bind Hoxes. Specific variants are known to be preferentially bound \textit{in vitro} by 3' Hoxes (TGATTGAT), middle Hoxes (TGATTAAT) or more 5' Hoxes (TGATTTAT) (\cite{Shen1997a,Slattery2011}).
 
-[can we guess the preferred hoxs for Meis based on the distribution of target sequences?]
+To study the correlation between \ac{TALE} protein binding and \ac{OCTA} motif variants, we quantified the over-representation of each of the 16 possible combinations of nucleotides at positions 5 and 6. To do this, we calculated the expected number of occurrences based on the nucleotide composition of the peak subset. Over-representation is thus the ratio of actual motif instances found by literal string matching to this expected number, for each \ac{OCTA} variant and peak subset. Results are represented in Figure \ref{fig:OCTAvariants}. [references for described Hox binding] 
+
+\begin{figure}[]
+  
+  \centering
+  \label{fig:OCTAvariants}
+  \includegraphics[width=\textwidth]{figures/barChart_OCTAvariants}
+  \caption[OCTA Motif Variants]{\textbf{OCTA Motif Variants.} Fold overrepresentation of A/TGATNNAT variants in peak subsets. Asterisks mark values of overrepresentation over 5 with p-values under $10^{-3}$.}
+\end{figure}
+
+We see a clear pattern of over-representation. Most \ac{OCTA} motif variants that have been described to be bound by Hoxes are over-represented in the non-redundant list of all peaks. Exceptions to this rule are WGATAGAT, WGATGCAT, and WGATCGAT. [are these two actually known to bind?]. All variants not described to be bound by Hoxes are not significantly over-represented except WGATGAAT.
+
+We do not see or see very little enrichment over random expectation of \ac{OCTA} variants in the subsets in which Meis is not involved (\ac{prepe}, \ac{pbxe}, \ac{pbpr}). The only clear exception to this is the WGATTGAT variant in \ac{pbpr} peaks. This lack of \ac{OCTA} enrichment is especially surprising for \ac{pbxe} peaks, which we expected would represent majoritarily Pbx-Hox binding.
+
+In contrast, all subsets in which Meis is involved show marked enrichment of at least some \ac{OCTA} variants. In \ac{meise} peaks, the most enriched variant is WGATTTAT, which appears over 30 times more frequently than would be expected by chance and is described in the literature as the preferred binding sequence for Hox paralog groups 6 to 10 in combination with Pbx. After WGATTTAT, the next \ac{OCTA} variants most enriched in \ac{meise} peaks are WGATTGAT and WGATGGAT. WGATTGAT is the preferred binding target for Hox paralog groups 1 to 5 in combination with Pbx \textit{in vitro}. WGATGGAT has been described as a binding site in vivo in the HoxB1 rhombomere 4 \ac{ARE} repeat 3 [check, refs]. Also enriched in \ac{meise} peaks are WGATAAAT, WGATTAAT (preferred target for paralogs 3 to 7) and WGATGAAT. 
+
+\ac{mepr} peaks show a pattern of enrichment similar to \ac{meise} peaks, but with higher levels of over-representation. The exception is the WGATAGAT variant, which is over-represented in \ac{mepr} but not \ac{meise} peaks. 
+
+The pattern of \ac{OCTA} over-representation in \ac{mepb} peaks is markedly different from that of \ac{meise} peaks. General levels of enrichment are also higher. In these, the most enriched variant is WGATTGAT, appearing over 55 times more frequently than would be expected by chance. The next most enriched variants are WGATGGAT and WGATTTAT, and then WGATTAAT. In this subset, WGATAGAT is not significantly enriched. A number of undescribed variants are enriched at moderate levels that are not over-represented in any other subset. 
+
+The over-representation pattern and levels in triple peaks are intermediate between those of \ac{mepb} and \ac{mepr} peaks. 
+
+These results strongly suggest that many Meis peaks are potentially Hox targets. If they are indeed, our data suggest that, following \cite{Shen1997}, the preferred Hox paralog groups for formation of ternary Pbx1-Meis-Hox are first groups 1 to 5, then 6 to 10, and then 3 to 7. 
 
 \section{Transcriptional targets}
 

@@ -73,11 +73,24 @@ For the identified peaks, \textit{de novo} motif discovery was run to identify c
 Individual instances of the core motifs within all peaks were searched with a local install of the FIMO (Find Individual Motif Ocurrences) program from the MEME suite (\cite{Bailey2009}) with default parameters (individual p-value cutoff $10^{-4}$). The resulting files were parsed and the data added to the peak tables using a custom Python script. 
 
 
+
 \subsection{Exploratory Data Analysis}
 
 
-Peak overlapping, correlation with RNA-seq data and conservation data aggregation were performed on the Galaxy bioinformatics platform (Blankenberg et al., 2010; Goecks et al., 2010). The set of peak coordinates for each factor was intersected with the sets for the other factors, the nearest transcript expression data were added to the tables, and the average conservation value (measured as the PhastCons 30-way vertebrate score (Siepel et al., 2005) was aggregated over the length of each peak with the aggregate genomic scores tool.
+Peak overlapping, correlation with RNA-seq data and conservation data aggregation were performed on the Galaxy bioinformatics platform (\cite{Blankenberg2010a, Goecks2010}). The set of peak coordinates for each factor was intersected with the sets for the other factors, the nearest transcript expression data were added to the tables, and the average conservation value (measured as the PhastCons 30-way vertebrate score (\cite{Siepel2005}) was aggregated over the length of each peak with the aggregate genomic scores tool.
 
 GC percentage count and literal motif match finding were performed using custom Python scripts (http://www.python.org/) run over the fasta sequence of the peaks.
 
 Genomic profiling of peaks was performed using custom Python scripts and the CEAS (Cis-regulatory Element Annotation System) tool (\cite{Shin2009}) within the Cistrome package (\cite{Liu2011}). Peak association with regulated genes was estimated by calculating peak density per megabase in all Ensembl v63 nuclear genes, their promoters and close intergenic regions and comparing with the corresponding values for genes up- or down-regulated in Meis1 \ac{KO} and \ac{prepi} embryos. Peak overlap with histone modification data was established by considering 3000pb around the summit of the histone mark peaks and intersecting with transcription factor peaks.
+
+\section{Statistical Testing}
+
+\subsection{Random Expectations}
+
+For \ac{OCTA} motif variants, we considered the expected number of instances of a motif containing i G/Cs and j A/Ts to be $I_{variant} = N x {\left(\frac{P(GC)}{2}\right)}^i x {\left(\frac{P(AT)}{2}\right)}^j$, where I is the number of instances expected, N is the number of bases in the collection and GC and AT are the GC and AT fractions in the collection.
+
+\subsection{Tests Used}
+
+We estimated the significance of OCTA motif variants with a Poisson test.
+
+
