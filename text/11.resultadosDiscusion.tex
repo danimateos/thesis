@@ -1,4 +1,4 @@
-\chapter{Results \& Discussion}
+\chapter{Results}
 \label{chp:results}
 
 \section{Cataloging, describing Meis, Prep, Pbx1 ChIP-seq peaks}
@@ -29,9 +29,9 @@ Prep and Pbx1 peaks overlap much more with each other than with Meis. Of 3331 Pr
 \begin{figure}[]
   
   \centering
-  \label{fig:peakOverlap}
   \includegraphics[width=\textwidth]{figures/vennDiagram_peakOverlap}
   \caption[Overlap of Meis, Prep, and Pbx1 peaks]{\textbf{Overlap of Meis, Prep, and Pbx1 peaks.} Venn diagram of the number of \ac{meise},\ac{prepe}, \ac{pbxe}, \ac{mepr}, \ac{mepb} and \ac{mepr} peaks. Areas of the circles are proportional to total peak numbers for Meis (red), Prep (blue) and Pbx1 (green) peaks. Intersection areas are roughly proportional to the number of \ac{mepr}, \ac{mepb}, \ac{mepr} and triple peaks.}
+  \label{fig:peakOverlap}
 \end{figure}
 
 
@@ -42,13 +42,13 @@ Triple peaks show the most obvious immediate interest, since they might represen
 
 To distinguish between the two possibilities, we performed ChIP-re-ChIP experiments. In these, the output of a \ac{CHIP} is used as input for a further round of \ac{CHIP} with antibodies against a different protein. In this way, the resulting DNA will be enriched specifically in fragments bound by the two proteins simultaneously. Results are shown in Figure \ref{fig:chiprechip}.
 
-\begin{figure}[]
+\begin{SCfigure}[]
   
   \centering
-  \label{fig:chiprechip}
-  \includegraphics[width=.5\textwidth]{figures/chiprechip}
+  \includegraphics[width=.6\textwidth]{figures/chiprechip}
   \caption[ChIP-re-ChIP experiments]{\textbf{ChIP-re-ChIP experiments.} Factors were subjected to succesive round of \ac{CHIP} with antibodies with different specificities, as indicated. Unspecific antibody (IgG) was used as a negative control. Purified DNA was amplified in a rate-limiting \ac{PCR} to obtain an amount of product roughly proportional to the peak DNA present. Band intensities over IgG band were considered as positive signals.}
-\end{figure}
+  \label{fig:chiprechip}
+\end{SCfigure}
 
 We tested 6 double peaks and 16 triple peaks. All of them showed simultaneous binding by at least two factors. The most frequent co-binding combinations we saw were either Pbx1+Prep (10/17) or Pbx1+Meis (17/21). In the 16 triple peaks we tested, we saw Meis+Prep co-binding in only 2 (Meis peaks 56 and 3034). One of these [completar]
 
@@ -64,9 +64,9 @@ Distance between peak summit and \ac{TSS} was calculated using the \ac{TSS} as p
 \begin{figure}[]
   
   \centering
-  \label{fig:distanceHistogram}
   \includegraphics[width=\textwidth]{figures/distanceHistogram}
   \caption[Distance From Peaks to \ac{TSS}s]{\textbf{Distance From Peaks to \ac{TSS}s.} The percentage of peaks in each category over total factor peaks is represented in the Y axis. X axis categories are labelled with the right limit of the interval, in \ac{bp}.}
+  \label{fig:distanceHistogram}
 \end{figure}
 
 
@@ -82,9 +82,9 @@ Therefore, peaks located between -500 and +100 were considered to be \ac{TSSA}. 
 \begin{figure}[]
   
   \centering
-  \label{fig:distanceBarChart}
   \includegraphics[width=\textwidth]{figures/barChart_TSSAIGCIFI}
   \caption[Genomic location classes within each factor-binding profile category]{\textbf{Genomic location classes within each factor-binding profile category.} The peaks for each combination of binding factors were classified into \ac{TSSA}, \ac{IG}, \ac{CI} or \ac{FI} categories. The resulting profile is shown here. ALL = total non-redundant genomic sites. Pr = \ac{prepe}, M = \ac{meise}, P = \ac{pbxe}, Pr-M = \ac{mepr}, Pr-P = \ac{pbpr}, M-P = \ac{mepb}, Pr-M-P = triple peaks.}
+  \label{fig:distanceBarChart}
 \end{figure}
 
 The results of this classification are represented in Figure \ref{fig:distanceBarChart}. There are obvious differences specially in the proportion of \ac{TSSA} peaks bound by different combinations of factors. Meis and Pbx1 bind \acp{TSS} very rarely, either alone or in combination. In contrast, over 30\% of \ac{prepe} peaks are located near a \ac{TSS}, a proportion that rises to over 65\% when bound in combination with Pbx1 (\ac{pbpr} peaks).
@@ -111,9 +111,9 @@ Meis peaks have a much higher conservation profile, approaching genomic regions 
 \begin{figure}[]
   
   \centering
-  \label{fig:conservation}
   \includegraphics[width=\textwidth]{figures/conservation}
   \caption[Conservation Profile of Peaks]{\textbf{Conservation Profile of Peaks.} PhastCons values at each position from summit were averaged across all peaks in a subset and plotted. Peaks for Meis, Prep, and Pbx1 are from this study. Peaks for HoxC9 are from \cite{Jung2010}. Peaks for p300 in mouse embryonic forebrain were extracted from \cite{Blow2010}. Peaks for PolII are from \cite{Mahony2011}. Other TFs in grey are CEBPA and HNF4A (\cite{Schmidt2010}), RAR (\cite{Mahony2011}) and FLAG-tagged Meis1 and HoxA9 in a leukemia cell line (\cite{Huang2012}).}
+  \label{fig:conservation}
 \end{figure}
 
 
@@ -136,9 +136,9 @@ In contrast with promoter marks, enhancer (H3K4Me1\textsuperscript{+} H3K4Me3\te
 \begin{figure}[]
   
   \centering
-  \label{fig:histoneMarks}
   \includegraphics[width=\textwidth]{figures/barChart_histoneMarks}
   \caption[Histone Marks in Peak Subsets]{\textbf{Histone Marks in Peak Subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:histoneMarks}
 \end{figure}
 
 
@@ -156,12 +156,12 @@ We ran rGADEM [parameters] on the sequence of non-overlapping subsets of peaks d
 
 \subsection{Core versus Accessory Motifs}
 
-\begin{figure}[]
+\begin{SCfigure}[]
     \centering
-  \label{fig:allMotifs}
-  \includegraphics[width=.5\textwidth]{figures/allMotifs}
+  \includegraphics[width=.7\textwidth]{figures/allMotifs}
   \caption[All Motifs Found in Peak subsets]{\textbf{All Motifs Found in Peak subsets.} Sequence logos for every motif found in each non-overlapping peak subset. "Core" motifs labelled in red. The logos resulting from the motif definitions (\acp{PSSM}) which we selected as canonical and used for directed motif search are highlighted in grey. The histograms to the right of the sequence logo show the distribution of motif positions with respect to the summit of the peak.}
-\end{figure}
+  \label{fig:allMotifs}
+\end{SCfigure}
 
 The representation of motif distances to the peak summit shows a fairly clear distinction between two different motif classes: "core" motifs that tend to be located near the summit of the peak and therefore shown a unimodal distance distribution, and "accessory" motifs that are depleted near the summit of the peak and thus show a bimodal distribution. 
 
@@ -190,41 +190,61 @@ Another of the accessory motifs appeared in several subsets and has suggestive c
 
 Going forward, we focused on the core motifs. Their distribution across the subsets defined by \ac{TALE} protein binding was extremely surprising. 
 
-Our \textit{a priori} expectation for the distribution of motifs is represented in Figure \ref{fig:coreMotifsExpected}. We expected the \ac{HEXA} motif to be prevalent in all subsets in which no Pbx1 was detected to be present: \ac{meise}, \ac{prepe}, and \ac{mepr}. We expected the \ac{OCTA} motif to be present in all subsets with Pbx1 binding, and the DECA motif to be present in the intersection of Meis/Prep with Pbx1.
-
-
 \begin{figure}[]
   
   \centering
-  \label{fig:coreMotifsExpected}
   \includegraphics[width=\textwidth]{{{figures/coreMotifs.expected}}}
   \caption["Core" Motifs Expected in Peak subsets]{\textbf{"Core" Motifs Expected in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:coreMotifsExpected}
 \end{figure}
 
-However, the actual results (summarised in Figure \ref{fig:coreMotifsFound}) diverged from our expectations. We found that the \ac{OCTA} motif is present in all Meis-positive subsets, included those that are Pbx1-negative. The \ac{DECA} motif, conversely, is present in all Prep-positive subsets, even in those that show no evidence of Pbx1 binding. \ac{HEXA} appears in both \ac{meise} and \ac{mepb}, but not in any Prep-positive subset. 
+Our \textit{a priori} expectation for the distribution of motifs is represented in Figure \ref{fig:coreMotifsExpected}. We expected the \ac{HEXA} motif to be prevalent in all subsets in which no Pbx1 was detected to be present: \ac{meise}, \ac{prepe}, and \ac{mepr}. We expected the \ac{OCTA} motif to be present in all subsets with Pbx1 binding, and the DECA motif to be present in the intersection of Meis/Prep with Pbx1.
 
 \begin{figure}[]
     \centering
-  \label{fig:coreMotifsFound}
   \includegraphics[width=\textwidth]{{{figures/coreMotifs.found}}}
   \caption["Core" Motifs Found in Peak subsets]{\textbf{"Core" Motifs Found in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:coreMotifsFound}
 \end{figure}
 
+However, the actual results (summarised in Figure \ref{fig:coreMotifsFound}) diverged from our expectations. We found that the \ac{OCTA} motif is present in all Meis-positive subsets, included those that are Pbx1-negative. The \ac{DECA} motif, conversely, is present in all Prep-positive subsets, even in those that show no evidence of Pbx1 binding. \ac{HEXA} appears in both \ac{meise} and \ac{mepb}, but not in any Prep-positive subset. 
 
 \subsection{Motif Frequencies}
 
 Motif discovery is a form of undirected search. Once having the motif definitions, we performed a directed search using the FIMO program from the MEME suite. Directed search can reveal the presence of motifs in subsets were they are present but not frequent enough to be detected by motif discovery. It also allows us to quantify motif frequencies.
 
-The results are represented in Figure \ref{fig:coreMotifFreqs}. \ac{HEXA} is most frequent in \ac{mepr} peaks, but it is not the most frequent core motif in any peak subset. \ac{OCTA} is the most frequent core motif in \ac{meise} peaks, in triple peaks and in \ac{mepb} peaks, where it is present in over 50\% of the peaks. \ac{DECA} and \ac{DECAEXT} are very frequent in all subsets where Prep is involved. This is espcially marked in \ac{pbpr} peaks, where \ac{HEXA} and \ac{OCTA} are present in under 10\% of peaks but  \ac{DECAEXT} is present in over 70\% of the peaks. In general, Meis peaks tend to be \ac{OCTA}-positive and to a lesser extent \ac{HEXA}-positive and Prep peaks tend to be \ac{DECA}- or \ac{DECAEXT}-positive, and this tendencies are exacerbated by co-binding with Pbx1. 
-
 \begin{figure}[]
-  
   \centering
-  \label{fig:coreMotifFreqs}
   \includegraphics[width=\textwidth]{figures/barChart_coreMotifFreqs}
   \caption[Core Motif Frequency in Peak Subsets]{\textbf{Core Motif Frequency in Peak Subsets.} Percentage of peaks in each factor binding category that contain each core motif. ALL = total non-redundant genomic sites. Pr = \ac{prepe}, M = \ac{meise}, P = \ac{pbxe}, Pr-M = \ac{mepr}, Pr-P = \ac{pbpr}, M-P = \ac{mepb}, Pr-M-P = triple peaks.}
+  \label{fig:coreMotifFreqs}
 \end{figure}
 
+The results are represented in Figure \ref{fig:coreMotifFreqs}. \ac{HEXA} is most frequent in \ac{mepr} peaks, but it is not the most frequent core motif in any peak subset. \ac{OCTA} is the most frequent core motif in \ac{meise} peaks, in triple peaks and in \ac{mepb} peaks, where it is present in over 50\% of the peaks. \ac{DECA} and \ac{DECAEXT} are very frequent in all subsets where Prep is involved. This is espcially marked in \ac{pbpr} peaks, where \ac{HEXA} and \ac{OCTA} are present in under 10\% of peaks but  \ac{DECAEXT} is present in over 70\% of the peaks. In general, Meis peaks tend to be \ac{OCTA}-positive and to a lesser extent \ac{HEXA}-positive and Prep peaks tend to be \ac{DECA}- or \ac{DECAEXT}-positive, and this tendencies are exacerbated by co-binding with Pbx1. 
+
+
+
+\subsection{Hox Peak Overlap}
+
+Only two \ac{GW} vertebrate Hox protein binding datasets have been published that use antibodies against the endogenous proteins rather than tagged versions of them (\cite{Jung2010,Donaldson2012}. These studies characterized binding of HoxC9 in E13.5 embryonic mouse spinal cord (\cite{Jung2010}) and of HoxA2 in E11.5 mouse embryo branchial arches (\cite{Donaldson2012}).
+
+Since the motifs found in our peaks suggest a pre-eminent role for Meis as a Hox cofactor, we took advantage of the fact that the samples used are comparable to ours to contrast our datasets to the ones published. The results are summarised in Figure \ref{fig:HoxOverlap}.
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=\textwidth]{figures/vennDiagram_A2C9overlap}
+  \caption[Hox Peak Overlap]{\textbf{Hox Peak Overlap.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:HoxOverlap}
+\end{figure}
+
+We found that, of the \ac{TALE} factors we tested, Meis is the one that overlaps the most with known Hox \ac{GW} binding site datasets. 28.9\% of our Meis peaks overlap with either HoxA2 peaks, HoxC9 peaks, or both. The figures for Prep and Pbx1 are 8.1\% and 12.6\%, respectively. Moreover, the majority of Prep-Hox and Pbx1-Hox peaks are also Meis peaks: 185/271 (68.3\%) for Prep and 348/440 (79\%) for Pbx1. 
+
+Surprisingly, Meis peaks bearing the \ac{OCTA} motif are not much more likely to overlap with Hox peaks than those that do not contain it: 842/2467 (34.1\%) versus 801/3219 (24.9\%), although this difference is significant ($\chi^2$ p-value $= 2.46 x 10^{-14}$). In contrast, Pbx1 peaks with the \ac{OCTA} motif are much more likely to overlap Hoxes: 245/554 (44.2\%) versus 195/2950 (6.6\%) ($\chi^2$ p-value $= 1.04 x 10^{-132}$). The same is true of Prep peaks: 116/286 (40.6\%) \ac{OCTA}-positive peaks overlap Hoxes, versus 155/3045 (5.1\%) that do not ($\chi^2$ p-value $= 1.04 x 10^{-97}$).
+[depende esto de que sean coMeis?]
+
+These data support the notion that most Meis peaks represent actual targets of Hox binding. Since binding sites of only two of the 39 Hox proteins in the mouse embryo cover almost 30\% of Meis peaks despite the samples not being exactly equal, it is reasonable to hypothesise that additional Hox \ac{GW} DNA-binding datasets will eventually reveal most Meis sites as Hox DNA binding sites. We have not seen a clear association of Meis binding sites with HoxC9 rather than HoxA2, despite the fact that Meis can bind HoxC9 but not HoxA2 directly.
+
+They also suggest that the most common cofactor for Hox proteins in the embryo is actually Meis, rather than Pbx. This is surprising since only Hox proteins in paralog groups 9 to 13 have been described to bind Meis directly, so other Hox proteins would depend on Pbx for Meis complex formation. 
 
 \subsection{OCTA Motif Variants}
 
@@ -235,9 +255,9 @@ To study the correlation between \ac{TALE} protein binding and \ac{OCTA} motif v
 \begin{figure}[]
   
   \centering
-  \label{fig:OCTAvariants}
   \includegraphics[width=\textwidth]{figures/barChart_OCTAvariants}
   \caption[OCTA Motif Variants]{\textbf{OCTA Motif Variants.} Fold overrepresentation of A/TGATNNAT variants in peak subsets. Asterisks mark values of overrepresentation over 5 with p-values under $10^{-3}$.}
+  \label{fig:OCTAvariants}
 \end{figure}
 
 We see a clear pattern of over-representation. Most \ac{OCTA} motif variants that have been described to be bound by Hoxes are over-represented in the non-redundant list of all peaks. Exceptions to this rule are WGATAGAT, WGATGCAT, and WGATCGAT. [are these two actually known to bind?]. All variants not described to be bound by Hoxes are not significantly over-represented except WGATGAAT.
@@ -252,29 +272,111 @@ The pattern of \ac{OCTA} over-representation in \ac{mepb} peaks is markedly diff
 
 The over-representation pattern and levels in triple peaks are intermediate between those of \ac{mepb} and \ac{mepr} peaks. 
 
-These results strongly suggest that many Meis peaks are potentially Hox targets. If they are indeed, our data suggest that, following \cite{Shen1997}, the preferred Hox paralog groups for formation of ternary Pbx1-Meis-Hox are first groups 1 to 5, then 6 to 10, and then 3 to 7. 
+These results strongly suggest that many Meis peaks are potentially Hox targets. If they are indeed, our data suggest that, following \cite{Shen1997}, the preferred Hox paralog groups for formation of ternary Pbx1-Meis-Hox are first groups 1 to 5, then 6 to 10, and then 3 to 7. However, the relative frequency of specific Pbx-Hox target sequences in our data might be explained by the relative abundance of Hox proteins in the input sample.
 
 \section{Transcriptional targets}
 
-\subsection{\# reads, sequencing, mapping info}
+In order to identify correlations between \ac{TALE} factor binding and transcriptional activity in the embryo, we obtained RNA from E11.5 Meis1 \ac{KO} embryos, \ac{prepi} embryos and \ac{WT} littermates. 
+
+We found 855 up-regulated and 631 down-regulated genes in \ac{prepi} embryos, and 210 up-regulated and 198 down-regulated genes in Meis1 \ac{KO} embryos. 
+
+To estimate the level of co-regulation between Meis and Prep proteins, we compared the number of genes that are mis-regulated in both kinds of defective embryos. 
+
+[completar]
+
 
 \subsection{attempting to correlate}
+
+
+
+
 
 \subsection{logistical model (?)}
 
 \section{Hox Clusters}
 
+The Hox clusters are a genomic region of particular interest for the study of \ac{TALE} factor binding. 
+
 \subsection{Distribution in the Hox clusters}
 
-\subsection{AP ChIP}
+We studied the read distribution in the Hox clusters (Figure \ref{fig:readDensity}). In all 4 Hox clusters, Meis read density is much higher than in the surrounding regions, and shows a concentration near the 3' end that extends to paralog 9 but no further. [describir 3' far peaks]
 
-\subsection{previously described reg sites}
+\begin{figure}[]
+  \centering
+  \includegraphics[width=\textwidth]{figures/readDensity_HoxClusters}
+  \caption[Read Density in the Hox Clusters]{\textbf{Read Density in the Hox Clusters.} Meis ChIP-seq read density in the four mouse Hox Clusters, represented as bar graphs.}
+  \label{fig:readDensity}
+\end{figure}
+
+\subsection{Peaks in the Hox Clusters}
+
+Plotting Meis, Prep and Pbx1 peaks in the Hox clusters (Figure \ref{fig:peaksClusters}) reveals a clear restriction of \ac{TALE} protein binding events in our sample to the region 3' to paralog 9 in every cluster. 
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=\textwidth]{figures/peaks_HoxClusters}
+  \caption[TALE Factor ChIP Peaks in the Hox Clusters]{\textbf{TALE Factor ChIP Peaks in the Hox Clusters.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:peaksClusters}
+\end{figure}
+
+We found many Meis peaks in the Hox clusters (20 in HoxA, 13 in HoxB, 7 in HoxC and 8 in HoxD) and many fewer Prep or Pbx1 peaks (4, 4, 2, and 1 for Prep; 8, 4, 2 and 0 for Pbx1). The HoxA cluster is clearly more bound by the \ac{TALE} Hox cofactors than the rest. All but one Prep and Pbx1 peaks in the Hox clusters overlap with Meis. 
+
+It is notable that the border of Meis binding versus non-binding is located precisely at the 9\textsuperscript{th} paralog. It is one of the three only paralog groups conserved in all four murine Hox clusters (the others being 4 and 13) and marks the transition between non-AbdB-related Hoxes and AbdB-related Hoxes. 
+
+\subsection{Hox Regulatory Sites from the Literature}
+
+Several auto- and cross-regulatory \ac{TALE} protein \acp{BS} have been described in the Hox clusters (\cite{Lampe2008, Gould1997, Jacobs1999, Manzanares2001, Poepperl1995, Tuempel2007}). 
+
+Of these 6 described regulatory sites, 4 show Meis peaks. 3 of the 4 also show Pbx1 binding, and one of these three shows triple a Meis-Prep-Pbx1 triple peak. All of them contain \ac{OCTA} motifs. In three of the six cases \ac{HEXA} motifs are present at a short distance to the \ac{OCTA} sequence.
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=\textwidth]{figures/peaks_RegSites}
+  \caption[Previously Described Hox Regulatory Sites]{\textbf{Previously Described Hox Regulatory Sites.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:RegSites}
+\end{figure}
 
 \subsection{Hox RNAseq}
 
+The subdivision of the Hox clusters regarding Meis is not restricted to DNA binding. We plotted transcriptional variations in Hox genes in the absence of Meis1 or Prep1 from our RNAseq data. 
+
+\begin{SCfigure}[]
+  \centering
+  \includegraphics[width=.6\textwidth]{figures/barChart_HoxVariation}
+  \caption[Differential transcriptional response of the 3' and 5' halves of the Hox clusters]{\textbf{Differential transcriptional response of the 3' and 5' halves of the Hox clusters.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda.
+}
+  \label{fig:HoxTranscript}
+\end{SCfigure}
+
+While most of the transcriptional changes were too subtle to be significant individually, the pattern is clear and consistent across clusters. In the absence of Meis1, 3' Hoxes tend to be overexpressed while 5' Hoxes tend to be repressed. The opposite pattern can be seen when considering the expression of Hox genes in \ac{prepi} embryos: 3' Hoxes are generally very slightly repressed while 5' Hoxes are markedly overexpressed.
+
+This pattern is surprising in at least two ways: Meis is more co-expressed with 3' Hoxes than with 5' Hoxes, so our expectation was that its lack would inhibit 3' gene expression while maybe derepressing 5' Hoxes. At the same time, the largest effect we detect in the transcription of the Hox genes is the overexpression of 5' Hoxes in the absence of Prep1, a region where neither Prep nor Meis bind.
+
+\subsection{AP ChIP}
+
+The Meis peaks in a given Hox cluster could be occupied by Meis constitutively or they could be occupied alternatively in different cells. Since our initial approach can not distinguish between these two possibilities, we performed \ac{CHIP} in embryo fragments. We dissected embryos along the \ac{AP} axis and performed Meis and unspecific IgG \ac{CHIP} on the resulting nuclear extracts.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{figures/APchIP}
+  \caption[ChIP on Antero-Posterior Embryo Fragments]{\textbf{ChIP on Antero-Posterior Embryo Fragments.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:APchip}
+\end{figure}
+
+The resulting DNA was subjected to \ac{PCR} using primers designed for amplification of products centered around each of the Meis peaks in the HoxA cluster and some peaks in other clusters, spanning approximately 100bp around each summit. The PCR conditions were chosen so that the amount of product was roughly proportional to the input. The results are shown in Figure \ref{fig:APchip}. 
+
+We discarded those peaks for which the IgG bands were of uneven intensity and compared the intensity of the bands for the rest of the peaks. As can be seen in Figure \ref{fig:APchipSummary}, Meis peaks occupancy is limited in the anteriormost part of thembryo, maximal in the middle section and skewed towards 5' peaks in the posteriormost part of the embryo.
+
+\begin{figure}[]
+  \centering
+  \includegraphics[width=\textwidth]{figures/APchIP_summary}
+  \caption[HoxA Cluster Meis Peak Antero-Posterior Occupancy]{\textbf{HoxA Cluster Meis Peak Antero-Posterior Occupancy.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:APchipSummary}
+\end{figure}
 
 [por colocar:
 
-- comparacion detallada con Meis ChIP-seq hematop {Wilson et al. 20101, Huang et al. 2012}
+- comparacion detallada con Meis ChIP-seq hematop {Wilson et al. 20101, Huang et al. 2012} y meis eye {Bovolenta}
 - Chip-proteomics
+- EMSA!
 ]
