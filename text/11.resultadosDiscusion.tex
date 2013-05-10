@@ -1,14 +1,10 @@
 \chapter{Results}
 \label{chp:results}
 
-\section{Cataloging, describing Meis, Prep, Pbx1 ChIP-seq peaks}
+\section{Characterizing Meis, Prep and Pbx1 ChIP-seq Peaks}
 
 \subsection{\# reads, sequencing, mapping info}
 Chromatin Immunoprecipitation was performed in the dissected trunks of embryonic stage E11.5 C57BL/6 mice.
-
-
-
-
 
 \subsection{Peak Calling}
 
@@ -265,18 +261,49 @@ In order to identify correlations between \ac{TALE} factor binding and transcrip
 
 We found 855 up-regulated and 631 down-regulated genes in \ac{prepi} embryos, and 210 up-regulated and 198 down-regulated genes in Meis1 \ac{KO} embryos. 
 
-To estimate the level of co-regulation between Meis and Prep proteins, we compared the number of genes that are mis-regulated in both kinds of defective embryos. 
+\begin{figure}[]
+  \centering
+  \includegraphics[width=\textwidth]{figures/barChart_changedGenes}
+  \caption[generic caption]{\textbf{generic caption.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \label{fig:changedGenes}
+\end{figure}
 
-[completar]
+\subsection{Co-Regulation}
 
+To estimate the level of co-regulation between Meis and Prep proteins, we compared the number of genes that are mis-regulated in both kinds of defective embryos, either in the same direction or in oposite directions. 
 
-\subsection{attempting to correlate}
+The chance that a given gene is misregulated in Meis1-deficient embryos is more about 5 times higher if it is misregulated in Prep1-deficient embryos and vice-versa, as shown in Figure \ref{fig:changedGenes}. All categories of co-regulation were over-represented compared to random expectation. The most over-represented category, with 10 times more genes than would be expected if the gene sets were independent, is composed of genes that are up-regulated in \ac{prepi} embryos and down-regulated in Meis1 \ac{KO} embryos, i.e., genes activated by Meis1 and repressed by Prep1.
 
+\subsection{Gene-Peak Correlation}
 
+We tried to establish how nearby binding events could be affecting the expressing of misregulated genes. In order to do that, we calculated the Meis and Prep peak density in \ac{TSSA}, \ac{IG} and \ac{CI} regions near misregulated genes and compared it to the corresponding \ac{GW} densities. The ratios are represented in Figure \ref{fig:coRegulation}.
 
+\begin{SCfigure}[]
+  \centering
+  \includegraphics[width=.6\textwidth]{figures/barChart_correlationGenes}
+  \caption[Correlation Between Misregulation and TALE Binding]{\textbf{Correlation Between Misregulation and TALE Binding.} Ratio of Meis and Prep peak density in misregulated gene-associated \ac{TSSA}, \ac{IG} and \ac{CI} regions to the corresponding \ac{GW} averages. Asterisks mark p-value \< $10^{-3}$.}
+  \label{fig:coRegulation}
+\end{SCfigure}
 
+We found some significant correlations between \ac{TALE} factor binding near genes and misregulation of those genes in \ac{TALE} factor mutants. Binding of Meis near the \ac{TSS} of a gene is associated to the gene being up-regulated in the Meis \ac{KO}, i.e., repressed by Meis in normal conditions. Surprisingly, binding of Prep to \ac{IG} or \ac{CI} regions is also associated to up-regulation in Meis1 \ac{KO}, although the effect is smaller in magnitude. 
 
-\subsection{logistical model (?)}
+Genes down-regulated in the \ac{prepi} embryo have a higher than average probability to show Prep peaks in their promoter, and Meis or Prep peaks within the transcriptional unit. 
+
+We could not find association between binding in any region and down-regulation in Meis1 \ac{KO} or up-regulation in \ac{prepi}. It has to be noted that we did not knock-out the full complement of Meis nor Prep genes in the embryo, so the weak correlations between protein binding and transcriptional effect we report could be due to redundancy with the rest of Meis/Prep factors. It also could mean that the relationship is more indirect than a simple binding-activation/repression model, or that we could not link the protein binding events to their actual target genes. 
+
+\subsection{Gene Ontology}
+
+Since Prep or Meis binding in the \ac{TSSA} or \ac{IG} regions of a gene might be associated to its transcriptional control by these factors, we performed Gene Ontology analysis on all genes bound by Meis or Prep to gain insight into their general functions. 
+
+\begin{SCfigure}[]
+  \centering
+  \includegraphics[width=.7\textwidth]{figures/GO}
+  \caption[Gene Ontology Categories Over-Represented in TALE-bound genes]{\textbf{Gene Ontology Categories Over-Represented in TALE-bound genes.} We restricted our search to the Biological Process ontology. We hand-selected the categories that were informative, i.e., specific and non-redundant. P-value cutoff was $10^{-5}$. Categories sorted by significance.}
+  \label{fig:GO}
+\end{SCfigure}
+
+For both Meis- and Prep-bound genes, the most significant category was regulation of transcription. That supports the view that the \ac{TALE} proteins are master regulators in the sense that they regulate the transcription of other regulators (\acp{TF}) rather than effector genes. 
+
 
 \section{Hox Clusters}
 
@@ -364,5 +391,5 @@ We discarded those peaks for which the IgG bands were of uneven intensity and co
 - comparacion detallada con Meis ChIP-seq hematop {Wilson et al. 20101, Huang et al. 2012} y meis eye {Bovolenta}
 - Chip-proteomics
 - EMSA!
-- RNA correlation
+
 ]

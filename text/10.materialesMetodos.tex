@@ -89,9 +89,11 @@ Genomic profiling of peaks was performed using custom Python scripts and the CEA
 
 For \ac{OCTA} motif variants, we considered the expected number of instances of a motif containing i G/Cs and j A/Ts to be $I_{variant} = N x {\left(\frac{P(GC)}{2}\right)}^i x {\left(\frac{P(AT)}{2}\right)}^j$, where I is the number of instances expected, N is the number of bases in the collection and GC and AT are the GC and AT fractions in the collection.
 
+For the number of co-regulated genes, we considered a random expectation the intersection of each of 4 pairs two independent sets. 
+
 \subsection{Tests Used}
 
 We estimated the significance of OCTA motif variants with a Poisson test in which $\lambda$ equals the random exxpected number of instances.
 
-Overlap between \ac{TALE} factors and Hoxes was tested with $\chi^2$ tests of independence applied to the relevant contingency tables.
+Overlap between \ac{TALE} factors and Hoxes was tested with $\chi^2$ tests of independence applied to the relevant contingency tables, as was co-regulation of misregulated genes in MEis1 and Prep1 deficient embryos.
 
