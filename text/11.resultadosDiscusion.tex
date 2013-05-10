@@ -59,8 +59,6 @@ These results suggest that Prep and Meis very rarely bind to the same genomic si
 
 The first step in the genomic characterization of peaks was to find the \ac{TSS} nearest to each peak. The gene set we used for this and all following gene-centric analyses was Ensembl63, the latest version available at the time of mapping.
 
-Distance between peak summit and \ac{TSS} was calculated using the \ac{TSS} as position 0 and direction of transcription as + direction, in order to differentiate upstream and downstream peaks. Results are represented in Figure \ref{fig:distanceHistogram}. We found a clear concentration of peaks near \ac{TSS}s for both Prep and Pbx1. Meis peaks, in contrast, show very little concentration near \ac{TSS}s, and a much higher proportion of them is located at extreme distances from \ac{TSS}s. 
-
 \begin{figure}[]
   
   \centering
@@ -69,7 +67,7 @@ Distance between peak summit and \ac{TSS} was calculated using the \ac{TSS} as p
   \label{fig:distanceHistogram}
 \end{figure}
 
-
+Distance between peak summit and \ac{TSS} was calculated using the \ac{TSS} as position 0 and direction of transcription as + direction, in order to differentiate upstream and downstream peaks. Results are represented in Figure \ref{fig:distanceHistogram}. We found a clear concentration of peaks near \ac{TSS}s for both Prep and Pbx1. Meis peaks, in contrast, show very little concentration near \ac{TSS}s, and a much higher proportion of them is located at extreme distances from \ac{TSS}s. 
 
 
 \subsection{TSSA, IG, CI, FI}
@@ -95,27 +93,25 @@ Intergenic peaks formed the majority of \ac{meise} peaks: over 45\% of \ac{meise
 
 \subsubsection{Intron/Exon Ratio of Meis Peaks is skewed}
 
-We considered the \ac{IG} peaks. 39.3\% of the mouse genome is covered by introns while 2\% is covered by exons, which results in an intron/exon ratio of 19.65. The corresponding percentages for Meis (39.9\% versus 0.5\%), Prep (24.9\% versus 1.6\%) and Pbx1 (31.4\% versus 1.6\%) work out to ratios of 79.8, 15.56 and 19.63, respectively. The difference was highly significant for Meis (p-value < $10^20$) but not for Prep or Pbx1. 
+We considered the \ac{IG} peaks. 39.3\% of the mouse genome is covered by introns while 2\% is covered by exons, which results in an intron/exon ratio of 19.65. The corresponding percentages for Meis (39.9\% versus 0.5\%), Prep (24.9\% versus 1.6\%) and Pbx1 (31.4\% versus 1.6\%) work out to ratios of 79.8, 15.56 and 19.63, respectively. The difference was highly significant for Meis (p-value \< $10^20$) but not for Prep or Pbx1. 
 
 
 \subsection{Conservation Profiling}
 
 We analyzed the conservation profile of peaks. For this analysis, the peak summit was used as position 0 and the phastCons (\cite{Siepel2005}) score was averaged for equivalent positions of all peaks of each subset. PhastCons is a measure of phylogenetic conservation that varies between 0 and 1 and roughly represents the probability that a given base is a conserved element. Phastcons is estimated from a hidden Markov model based on multiple sequence alignments and is available precomputed in several genomic databases. The version we used was 30-vertebrate phastCons.
 
-The resulting profile shows that Prep and Pbx1 peaks have a high conservation value near the summit that tails off to genomic average values. The maximum conservation value and the profile are very similar to \acp{TSS} marked by \ac{PolII} peaks from \cite{Mahony2011}, which together with the previously mentioned high proportion of \ac{TSSA} peks within Prep and Pbx1 suggests a significant portion of these may be enhancers.
-
-Meis peaks have a much higher conservation profile, approaching genomic regions bound by p300 in the embryonic forebrain. These p300 peaks represent the most conserved enhancers (\cite{Blow2010}). The only other \ac{TF} peaks approaching this level of conservation that we have observed are, notably, those for HoxC9 in the embryonic spinal cord \cite{Jung2010}. Thus, genomic loci bound by Meis are both far way from \acp{TSS} and highly conserved, which strongly suggests functional relevance. In particular, they might be working as enhancers.
-
-[what does HoxA2 look like?] 
-
 \begin{figure}[]
-  
   \centering
   \includegraphics[width=\textwidth]{figures/conservation}
   \caption[Conservation Profile of Peaks]{\textbf{Conservation Profile of Peaks.} PhastCons values at each position from summit were averaged across all peaks in a subset and plotted. Peaks for Meis, Prep, and Pbx1 are from this study. Peaks for HoxC9 are from \cite{Jung2010}. Peaks for p300 in mouse embryonic forebrain were extracted from \cite{Blow2010}. Peaks for PolII are from \cite{Mahony2011}. Other TFs in grey are CEBPA and HNF4A (\cite{Schmidt2010}), RAR (\cite{Mahony2011}) and FLAG-tagged Meis1 and HoxA9 in a leukemia cell line (\cite{Huang2012}).}
   \label{fig:conservation}
 \end{figure}
 
+The resulting profile shows that Prep and Pbx1 peaks have a high conservation value near the summit that tails off to genomic average values. The maximum conservation value and the profile are very similar to \acp{TSS} marked by \ac{PolII} peaks from \cite{Mahony2011}, which together with the previously mentioned high proportion of \ac{TSSA} peks within Prep and Pbx1 suggests a significant portion of these may be enhancers.
+
+Meis peaks have a much higher conservation profile, approaching genomic regions bound by p300 in the embryonic forebrain. These p300 peaks represent the most conserved enhancers (\cite{Blow2010}). The only other \ac{TF} peaks approaching this level of conservation that we have observed are, notably, those for HoxC9 in the embryonic spinal cord \cite{Jung2010}. Thus, genomic loci bound by Meis are both far way from \acp{TSS} and highly conserved, which strongly suggests functional relevance. In particular, they might be working as enhancers.
+
+[what does HoxA2 look like?] 
 
 [meto los histogramas de valores de conservación para todo el pico?]
 
@@ -125,24 +121,16 @@ In order to perform a test of this potential function of Meis \acp{BS} as enhanc
 
 We took advantage of the extensive, high-quality epigenetic data generated by the Ren lab at LICR for the ENCODE project (\cite{Shen2012}). We chose the source tissue that most closely resembled our sample, \acp{MEF}. 
 
-For all three factors, \ac{TSSA} peaks showed a high level of overlap with promoter epigenetic marks (between 43.8 and 58.6\% of all \ac{TSSA} peaks versus 0.38\% of the genome tagged RNApolII\textsuperscript{+} H3K4Me3\textsuperscript{+}). Only Prep non-\ac{TSSA} peaks showed high association with promoter marks (around 17\% for all other categories). Meis non-\ac{TSSA} peaks had low levels of coincidence (between 1.7 and 4.2\%) and Pbx1 non-\ac{TSSA} peaks had levels intermediate between those of Meis and Prep (between 5.6 and 9.8\%) (Figure \ref{fig:histoneMarks}a). Thus we conclude that \ac{TSSA} peaks likely represent \textit{bona fide} promoters. In addition, many non-\ac{TSSA} Prep peaks could in fact be either undescribed promoters or simply promoters not present in the gene catalogue we used.
-
-In contrast with promoter marks, enhancer (H3K4Me1\textsuperscript{+} H3K4Me3\textsuperscript{-}) and bivalent enhancer (H3K4Me1\textsuperscript{+} H3K27Ac\textsuperscript{+}) marks are much more associated with Meis peaks than with Prep or Pbx1 peaks. 25.5\% of Meis peaks bear enhancer marks versus [completar]
-
-
-
-
-
 \begin{figure}[]
-  
   \centering
   \includegraphics[width=\textwidth]{figures/barChart_histoneMarks}
-  \caption[Histone Marks in Peak Subsets]{\textbf{Histone Marks in Peak Subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[Histone Marks in Peak Subsets]{\textbf{Histone Marks in Peak Subsets.} A) percentage of peaks in each genomic binding class that show promoter (RNApolII\textsuperscript{+}; H3K4Me3\textsuperscript{+}) epigenetic marks. B) percentage of peaks for each factor that show enhancer (H3K4Me1\textsuperscript{+}; H3K4Me3\textsuperscript{-}) or bivalent enhancer (H3K4Me1\textsuperscript{+}; H3K27Ac\textsuperscript{+}) histone marks.}
   \label{fig:histoneMarks}
 \end{figure}
 
+For all three factors, \ac{TSSA} peaks showed a high level of overlap with promoter epigenetic marks (between 43.8 and 58.6\% of all \ac{TSSA} peaks versus 0.38\% of the genome tagged RNApolII\textsuperscript{+} H3K4Me3\textsuperscript{+}). Only Prep non-\ac{TSSA} peaks showed high association with promoter marks (around 17\% for all other categories). Meis non-\ac{TSSA} peaks had low levels of coincidence (between 1.7 and 4.2\%) and Pbx1 non-\ac{TSSA} peaks had levels intermediate between those of Meis and Prep (between 5.6 and 9.8\%) (Figure \ref{fig:histoneMarks}a). Thus we conclude that \ac{TSSA} peaks likely represent \textit{bona fide} promoters. In addition, many non-\ac{TSSA} Prep peaks could in fact be either undescribed promoters or simply promoters not present in the gene catalogue we used.
 
- 
+In contrast with promoter marks, enhancer (H3K4Me1\textsuperscript{+} H3K4Me3\textsuperscript{-}) and bivalent enhancer (H3K4Me1\textsuperscript{+} H3K27Ac\textsuperscript{+}) marks are much more associated with Meis peaks than with Prep or Pbx1 peaks. 25.5\% of Meis peaks bear enhancer marks versus [completar]
  
 \section{Sequence analysis}
 
@@ -191,19 +179,18 @@ Another of the accessory motifs appeared in several subsets and has suggestive c
 Going forward, we focused on the core motifs. Their distribution across the subsets defined by \ac{TALE} protein binding was extremely surprising. 
 
 \begin{figure}[]
-  
   \centering
   \includegraphics[width=\textwidth]{{{figures/coreMotifs.expected}}}
   \caption["Core" Motifs Expected in Peak subsets]{\textbf{"Core" Motifs Expected in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
   \label{fig:coreMotifsExpected}
 \end{figure}
 
-Our \textit{a priori} expectation for the distribution of motifs is represented in Figure \ref{fig:coreMotifsExpected}. We expected the \ac{HEXA} motif to be prevalent in all subsets in which no Pbx1 was detected to be present: \ac{meise}, \ac{prepe}, and \ac{mepr}. We expected the \ac{OCTA} motif to be present in all subsets with Pbx1 binding, and the DECA motif to be present in the intersection of Meis/Prep with Pbx1.
+Our \textit{a priori} expectation for the distribution of motifs, based on the extensive literature on \textit{in vitro} binding of the \ac{TALE} factors, is represented in Figure \ref{fig:coreMotifsExpected}. We expected the \ac{HEXA} motif to be prevalent in all subsets in which no Pbx1 was detected to be present: \ac{meise}, \ac{prepe}, and \ac{mepr}. We expected the \ac{OCTA} motif to be present in all subsets with Pbx1 binding, and the DECA motif to be present in the intersection of Meis/Prep with Pbx1.
 
 \begin{figure}[]
     \centering
   \includegraphics[width=\textwidth]{{{figures/coreMotifs.found}}}
-  \caption["Core" Motifs Found in Peak subsets]{\textbf{"Core" Motifs Found in Peak subsets.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption["Core" Motifs Found in Peak subsets]{\textbf{"Core" Motifs Found in Peak subsets.} Sequence logos (\cite{Schneider1990}) for each core motif found in each peak subset. In a sequence logo, the height of a letter is proportional to its frequency at that position and the height of the total stack at each position is proportional to the invariance at that position in the original alignment.}
   \label{fig:coreMotifsFound}
 \end{figure}
 
@@ -222,22 +209,20 @@ Motif discovery is a form of undirected search. Once having the motif definition
 
 The results are represented in Figure \ref{fig:coreMotifFreqs}. \ac{HEXA} is most frequent in \ac{mepr} peaks, but it is not the most frequent core motif in any peak subset. \ac{OCTA} is the most frequent core motif in \ac{meise} peaks, in triple peaks and in \ac{mepb} peaks, where it is present in over 50\% of the peaks. \ac{DECA} and \ac{DECAEXT} are very frequent in all subsets where Prep is involved. This is espcially marked in \ac{pbpr} peaks, where \ac{HEXA} and \ac{OCTA} are present in under 10\% of peaks but  \ac{DECAEXT} is present in over 70\% of the peaks. In general, Meis peaks tend to be \ac{OCTA}-positive and to a lesser extent \ac{HEXA}-positive and Prep peaks tend to be \ac{DECA}- or \ac{DECAEXT}-positive, and this tendencies are exacerbated by co-binding with Pbx1. 
 
-
-
 \subsection{Hox Peak Overlap}
 
 Only two \ac{GW} vertebrate Hox protein binding datasets have been published that use antibodies against the endogenous proteins rather than tagged versions of them (\cite{Jung2010,Donaldson2012}. These studies characterized binding of HoxC9 in E13.5 embryonic mouse spinal cord (\cite{Jung2010}) and of HoxA2 in E11.5 mouse embryo branchial arches (\cite{Donaldson2012}).
 
 Since the motifs found in our peaks suggest a pre-eminent role for Meis as a Hox cofactor, we took advantage of the fact that the samples used are comparable to ours to contrast our datasets to the ones published. The results are summarised in Figure \ref{fig:HoxOverlap}.
 
+We found that, of the \ac{TALE} factors we tested, Meis is the one that overlaps the most with known Hox \ac{GW} binding site datasets. 28.9\% of our Meis peaks overlap with either HoxA2 peaks, HoxC9 peaks, or both. The figures for Prep and Pbx1 are 8.1\% and 12.6\%, respectively. Moreover, the majority of Prep-Hox and Pbx1-Hox peaks are also Meis peaks: 185/271 (68.3\%) for Prep and 348/440 (79\%) for Pbx1. 
+
 \begin{figure}[]
   \centering
   \includegraphics[width=\textwidth]{figures/vennDiagram_A2C9overlap}
-  \caption[Hox Peak Overlap]{\textbf{Hox Peak Overlap.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[Hox Peak Overlap]{\textbf{Hox Peak Overlap.} Overlap between Meis (red), Prep (blue) or Pbx1 (green) peaks and HoxA2(grey) and HoxC9 (yellow) peaks. Areas of the circles are proportional to total peak numbers. Intersection areas are roughly proportional to the number of common peaks.}
   \label{fig:HoxOverlap}
 \end{figure}
-
-We found that, of the \ac{TALE} factors we tested, Meis is the one that overlaps the most with known Hox \ac{GW} binding site datasets. 28.9\% of our Meis peaks overlap with either HoxA2 peaks, HoxC9 peaks, or both. The figures for Prep and Pbx1 are 8.1\% and 12.6\%, respectively. Moreover, the majority of Prep-Hox and Pbx1-Hox peaks are also Meis peaks: 185/271 (68.3\%) for Prep and 348/440 (79\%) for Pbx1. 
 
 Surprisingly, Meis peaks bearing the \ac{OCTA} motif are not much more likely to overlap with Hox peaks than those that do not contain it: 842/2467 (34.1\%) versus 801/3219 (24.9\%), although this difference is significant ($\chi^2$ p-value $= 2.46 x 10^{-14}$). In contrast, Pbx1 peaks with the \ac{OCTA} motif are much more likely to overlap Hoxes: 245/554 (44.2\%) versus 195/2950 (6.6\%) ($\chi^2$ p-value $= 1.04 x 10^{-132}$). The same is true of Prep peaks: 116/286 (40.6\%) \ac{OCTA}-positive peaks overlap Hoxes, versus 155/3045 (5.1\%) that do not ($\chi^2$ p-value $= 1.04 x 10^{-97}$).
 [depende esto de que sean coMeis?]
@@ -315,7 +300,7 @@ Plotting Meis, Prep and Pbx1 peaks in the Hox clusters (Figure \ref{fig:peaksClu
 \begin{figure}[]
   \centering
   \includegraphics[width=\textwidth]{figures/peaks_HoxClusters}
-  \caption[TALE Factor ChIP Peaks in the Hox Clusters]{\textbf{TALE Factor ChIP Peaks in the Hox Clusters.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[TALE Factor ChIP Peaks in the Hox Clusters]{\textbf{TALE Factor ChIP Peaks in the Hox Clusters.} Arrowheads represent peaks, black boxes represent transcriptional units. We have represented the short isoform of each paralog 3 for easier orientation.}
   \label{fig:peaksClusters}
 \end{figure}
 
@@ -332,7 +317,7 @@ Of these 6 described regulatory sites, 4 show Meis peaks. 3 of the 4 also show P
 \begin{figure}[]
   \centering
   \includegraphics[width=\textwidth]{figures/peaks_RegSites}
-  \caption[Previously Described Hox Regulatory Sites]{\textbf{Previously Described Hox Regulatory Sites.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[Previously Described Hox Regulatory Sites]{\textbf{Previously Described Hox Regulatory Sites.} In each panel, the top section represents the genomic neighbourhood (15kb), with peak positions marked by arrowheads as in Figure \ref{fig:peaksClusters}. The bottom section shows a close-up (1kb) on the described regulatory site, with motif instance sequences marked at their position and peaks represented as solid bars covering their full span. Black bars represent exons, gray bars represent introns or intergenic regions.}
   \label{fig:RegSites}
 \end{figure}
 
@@ -340,15 +325,15 @@ Of these 6 described regulatory sites, 4 show Meis peaks. 3 of the 4 also show P
 
 The subdivision of the Hox clusters regarding Meis is not restricted to DNA binding. We plotted transcriptional variations in Hox genes in the absence of Meis1 or Prep1 from our RNAseq data. 
 
+While most of the transcriptional changes were too subtle to be significant individually, the pattern is consistent across clusters and significant (p-value \< 0.5). In the absence of Meis1, 3' Hoxes tend to be overexpressed while 5' Hoxes tend to be repressed. The opposite pattern can be seen when considering the expression of Hox genes in \ac{prepi} embryos: 3' Hoxes are generally very slightly repressed while 5' Hoxes are markedly overexpressed.
+
 \begin{SCfigure}[]
   \centering
-  \includegraphics[width=.6\textwidth]{figures/barChart_HoxVariation}
-  \caption[Differential transcriptional response of the 3' and 5' halves of the Hox clusters]{\textbf{Differential transcriptional response of the 3' and 5' halves of the Hox clusters.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda.
-}
+  \includegraphics[width=.7\textwidth]{figures/barChart_HoxVariation}
+  \caption[Differential transcriptional response of the 3' and 5' halves of the Hox clusters]{\textbf{Differential transcriptional response of the 3' and 5' halves of the Hox clusters.} Meis \ac{KO} (red) or \ac{prepi} (blue) Hox transcripts abundance relative to \ac{WT} littermate controls, as percentages.}
   \label{fig:HoxTranscript}
 \end{SCfigure}
 
-While most of the transcriptional changes were too subtle to be significant individually, the pattern is clear and consistent across clusters. In the absence of Meis1, 3' Hoxes tend to be overexpressed while 5' Hoxes tend to be repressed. The opposite pattern can be seen when considering the expression of Hox genes in \ac{prepi} embryos: 3' Hoxes are generally very slightly repressed while 5' Hoxes are markedly overexpressed.
 
 This pattern is surprising in at least two ways: Meis is more co-expressed with 3' Hoxes than with 5' Hoxes, so our expectation was that its lack would inhibit 3' gene expression while maybe derepressing 5' Hoxes. At the same time, the largest effect we detect in the transcription of the Hox genes is the overexpression of 5' Hoxes in the absence of Prep1, a region where neither Prep nor Meis bind.
 
@@ -359,7 +344,7 @@ The Meis peaks in a given Hox cluster could be occupied by Meis constitutively o
 \begin{figure}[p]
   \centering
   \includegraphics[width=\textwidth]{figures/APchIP}
-  \caption[ChIP on Antero-Posterior Embryo Fragments]{\textbf{ChIP on Antero-Posterior Embryo Fragments.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[ChIP on Antero-Posterior Embryo Fragments]{\textbf{ChIP on Antero-Posterior Embryo Fragments.} Band intensity of rate-limited PCR on the Meis ChIP products with peak primers. Numbers denote Meis peak number. For each peak, the left three lanes are PCR products from the three inputs at the same DNA concentration. The right six lanes are PCR products of a fixed amount of control (IgG) or Meis ChIP DNA.}
   \label{fig:APchip}
 \end{figure}
 
@@ -370,7 +355,7 @@ We discarded those peaks for which the IgG bands were of uneven intensity and co
 \begin{figure}[]
   \centering
   \includegraphics[width=\textwidth]{figures/APchIP_summary}
-  \caption[HoxA Cluster Meis Peak Antero-Posterior Occupancy]{\textbf{HoxA Cluster Meis Peak Antero-Posterior Occupancy.} leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda leyenda}
+  \caption[HoxA Cluster Meis Peak Antero-Posterior Occupancy]{\textbf{HoxA Cluster Meis Peak Antero-Posterior Occupancy.} Summary of the results in Figure \ref{fig:APchip}. All peaks in the HoxA cluster were tested for AP Meis occupancy. An absent arrowhead indicates no binding detected, a light-colored arrowhead indicates positive but not predominant binding compared to other embryo regions, and a dark-colored arrowhead indicates predominant binding}
   \label{fig:APchipSummary}
 \end{figure}
 
@@ -379,4 +364,5 @@ We discarded those peaks for which the IgG bands were of uneven intensity and co
 - comparacion detallada con Meis ChIP-seq hematop {Wilson et al. 20101, Huang et al. 2012} y meis eye {Bovolenta}
 - Chip-proteomics
 - EMSA!
+- RNA correlation
 ]
