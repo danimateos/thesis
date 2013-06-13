@@ -1,18 +1,12 @@
 \documentclass[11pt,a4paper]{memoir}
 
 \usepackage[utf8]{inputenc}
-%\usepackage{fontspec}
 
-%\usepackage[T1]{fontenc}
-%\usepackage{textcomp}
 
-\usepackage[greek,spanish,english]{babel}
+\usepackage[spanish, english]{babel}
 \usepackage{csquotes, graphicx, amsmath, amsfonts, amssymb, textcomp, sidecap}
-
 \usepackage[printonlyused]{acronym}
 
-\usepackage[style=authoryear]{biblatex} 
-\bibliography{Mateos2013.Tesis}
 
 \usepackage[unicode]{hyperref}
 \hypersetup{
@@ -23,6 +17,8 @@
     urlcolor=black
 }
 
+\usepackage[style=authoryear, backend=biber, hyperref=true]{biblatex} 
+\addbibresource{Mateos2013.Tesis.bib}
 
 \numberwithin{table}{chapter}
 \numberwithin{figure}{chapter}
