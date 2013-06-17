@@ -4,8 +4,10 @@
 \section{Characterization of TALE protein ChIP-seq Peaks}
 
 \subsection{\# reads, sequencing, mapping info}
+
 \ac{CHIP} was performed in the dissected trunks of embryonic stage E11.5 C57BL/6 mice. The trunk was selected as input material because it is the main domain of Meis and Hox expression.
 
+The antibodies used recognize most of the \ac{TALE} protein variants found in the embryo. For Meis, we used an antibody raised against the \ac{N-ter} of Meis1 that recognizes both short and long \ac{C-ter} isoforms of Meis1 combined with an antibody raised against the \ac{C-ter} portion of Meis that recognizes the short isoforms of both Meis1 and Meis2 (Meis1a, Meis2a and Meis2b). For Prep1, we used an antibody that recognizes both Prep1 and Prep2. For Pbx, we used an antibody that only recognizes Pbx1, but this is the predominant Pbx in the mouse embryo [check].
 
 %[MT: Describe first the antibodies and what are they expected to pull down.  Describe the comprehesiveness of the experiment for Meis. Prep and Pbx proteins.  describe how many reads were obtained and aligned]
 
@@ -265,7 +267,16 @@ These results strongly suggest that many Meis peaks are potentially Hox targets.
 
 \subsection{EMSA on TGATGAAT}
 
+The \ac{OCTA} variant TGATGAAT has never been reported to bind Hox proteins or Pbx-Hox heterodimers. Its overrepresentation in \ac{meise}, \ac{mepr}, \ac{mepb} and triple peak subsets suggested it could be a novel target for Pbx-Hox heterodimers. We decided to test this possibility by \ac{EMSA}.
 
+\begin{figure}[]
+  \centering
+  \includegraphics[width=\textwidth]{figures/GAAT_EMSA}
+  \caption[EMSA on the novel OCTA variant TGATGAAT]{\textbf{EMSA on the novel OCTA variant TGATGAAT.} EMSA was performed on oligonucleotides containing the novel OCTA variant TGATGAAT and a mutated version, using antibodies for TALE proteins and the Hox proteins HoxA9.}
+  \label{fig:GAAT_EMSA}
+\end{figure}
+
+As shown in Figure \ref{fig:GAAT_EMSA}, the antibodies against Pbx1, Prep and Meis all interfered with complex formation on the \ac{WT} sequence. Anti-HoxA9 antibody interfered sligthly but clearly with the formation of the complex on both oligonucleotide probes, showing the sequence is indeed a target for at least some Hox proteins. No specific complex formed on the mutated versions of the sequence.
 
 \section{Transcriptional targets}
 
