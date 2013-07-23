@@ -32,9 +32,9 @@ Proportionality of product amount to input concentration was tested along a rang
 
 Primers were designed for all Meis peaks in the Hox clusters using primer-BLAST and targeting amplification conditions of 60$^\circ$C and product length around 100pb. 
 
-\section{ChIP-chip [preguntar a Dima si lo puedo usar]}
+%\section{ChIP-chip [preguntar a Dima si lo puedo usar]}
 
-Chromatin immunoprecipitations of mouse thymocyte lysates were performed as described above with anti-Prep1/2 antibody (N15, Santa Cruz Biotechnology, Santa Cruz, USA) and anti-Pbx2 antibody (G20, Santa Cruz Biotechnology, Santa Cruz, USA). A single-cell suspension was prepared from thymuses from 6-8-wk-old mice (wt C57B6 strain) by crushing them against a cell strainer. Approximately $5x10^7$ cells were used for each immunoprecipitation. After immunoprecipitation and purification, DNA was amplified using a Whole Genome Amplification (WGA1) kit (Sigma-Aldrich, St-Louis, USA). About 3-5 ug of the amplified material was used to prepare the probe for hybridization to the Nimblegen mouse RefSeq promoter array (C4222-00-01)(Nimblegen-Roche, Germany). Probe preparation, hybridization reactions and data analysis were performed according to the manufacturer’s recommendations. Peak enrichment was analyzed by Model-based analysis of two-color arrays (MA2C) (cistrome.org) using the following parameters: bandwidth 300, max gap 250, min probes 5, threshold method P value, value, $10^{-6}$, normalization method robust, C value 2, mm9 assembly.
+%Chromatin immunoprecipitations of mouse thymocyte lysates were performed as described above with anti-Prep1/2 antibody (N15, Santa Cruz Biotechnology, Santa Cruz, USA) and anti-Pbx2 antibody (G20, Santa Cruz Biotechnology, Santa Cruz, USA). A single-cell suspension was prepared from thymuses from 6-8-wk-old mice (wt C57B6 strain) by crushing them against a cell strainer. Approximately $5x10^7$ cells were used for each immunoprecipitation. After immunoprecipitation and purification, DNA was amplified using a Whole Genome Amplification (WGA1) kit (Sigma-Aldrich, St-Louis, USA). About 3-5 ug of the amplified material was used to prepare the probe for hybridization to the Nimblegen mouse RefSeq promoter array (C4222-00-01)(Nimblegen-Roche, Germany). Probe preparation, hybridization reactions and data analysis were performed according to the manufacturer’s recommendations. Peak enrichment was analyzed by Model-based analysis of two-color arrays (MA2C) (cistrome.org) using the following parameters: bandwidth 300, max gap 250, min probes 5, threshold method P value, value, $10^{-6}$, normalization method robust, C value 2, mm9 assembly.
 
 \section{RNA extraction}
 
@@ -47,22 +47,31 @@ mRNA samples were sequenced using the paired-end 50bp protocol. Reads (~7M per s
 
 \section{EMSA}
 
-Nuclear extracts were isolated from cells prepared from E11.5 mouse embryonic body trunks (wt CD1 strain) as described (Longobardi and Blasi, 2003). Briefly, cells were washed twice with cold PBS, collected in 500 \textmu l cold buffer A (10 mm HEPES, pH 7.9, 10 mm KCl, 1.5 mm MgCl2, 0.5 mM DTT, proteinase inhibitor cocktail), left for 10 min on ice, and lysed by adding Triton X-100 to a final concentration of 0.3\%. Nuclear extracts were prepared by resuspending pelleted nuclei in 100 \textmu l buffer C (20 mm HEPES, pH 7.9, 25\% glycerol (v/v), 0.42 m NaCl, 1.5 mm MgCl2, 0.5 mM DTT, 0.5 mm EDTA, proteinase inhibitor cocktail) for 30 min on ice. The extract was cleared by centrifugation.
+Nuclear extracts were isolated from cells prepared from E11.5 mouse embryonic body trunks as described \parencite{Longobardi2003}. Briefly, cells were washed twice with cold PBS, collected in 500 \textmu l cold buffer A (10 mm HEPES, pH 7.9, 10 mm KCl, 1.5 mm MgCl2, 0.5 mM DTT, proteinase inhibitor cocktail), left for 10 min on ice, and lysed by adding Triton X-100 to a final concentration of 0.3\%. Nuclear extracts were prepared by resuspending pelleted nuclei in 100 \textmu l buffer C (20 mm HEPES, pH 7.9, 25\% glycerol (v/v), 0.42 m NaCl, 1.5 mm MgCl2, 0.5 mM DTT, 0.5 mm EDTA, proteinase inhibitor cocktail) for 30 min on ice. The extract was cleared by centrifugation.
 EMSA reactions were performed in 20 \textmu l reaction mix containing 10 mM Tris-HCl (pH 7.6), 0.5 mM EDTA 0.5, 0.5 mM EGTA, 5\% glycerol buffer, 80 mM NaCl, 1\textmu g poly-dIdC, 1 mM DTT, 5 \textmu g nuclear extract and 30,000 cpm of the 32P-labeled probe. When indicated, we added unlabeled probe in 50X excess or specific antibodies (4 \textmu g) against Prep1/2 (N15, Santa Cruz Biotechnology, Santa Cruz, USA), Meis (1:1 mix of K830 and K844) or Pbx1 (P20, Santa Cruz Biotechnology, Santa Cruz, USA). Reactions were carried out for 30 min at room temperature, and the complexes resolved by 5\% non-denaturing PAGE. The gel was dried and scanned in a phosphorimager. 
-The following double-stranded oligonucleotides were used, in addition to mutant versions as indicated in figures: and text:
+The following double-stranded oligonucleotides were used, in addition to mutant versions as indicated in figures and text:
+
 5’-AGGGAAGAGCCTGACAGATGACAGTTTCGAAAAA-3’ (Meis Peak 586) -- HEXA
+
 5’-CAAATAACTGATTGATTGCGGTCGAGGCACATTG-3’ (Meis Peak 313) – OCTA
+
 5’-GGCCTCGTGATTGACAGGCTCGCCG-3’- DECA
+
 5’-ATGCTGTGACAGTGATAAATGACGGTGCAGAA-3’ (Meis  Peak 1) -- OCTA + HEXA
+
 5’-AATTTAAGCAGTGATGAATGAGCTCGGCTG-3 (Meis Peak 595)
+
 5’-TTTGGGTGACAAAGATGAATGGTCTATTGT-3’ (Meis Peak 9)
+
 5’-GACAACCTCGCCTGTGATTGACCCCTGGAGTGG-3’ (Meis Peak 54)
+
 5’-AGGGGCCCGTGATTGACAGGCTGAACTACAGACT-3’ (Prep Peak 1440)
+
 5’-TTGCTGACAACTGACTGATAAATTATTTTCTGCT-3’ (Meis Peak 857)
 
-\section{Alleles used for LOF}
+%\section{Alleles used for LOF}
 
-\section{ChIP proteomics}
+%\section{ChIP proteomics}
 
 \section{Bioinformatics}
 
@@ -81,7 +90,7 @@ Peak overlapping, correlation with RNA-seq data and conservation data aggregatio
 
 GC percentage count and literal motif match finding were performed using custom Python scripts (http://www.python.org/) run over the fasta sequence of the peaks.
 
-Genomic profiling of peaks was performed using custom Python scripts and the CEAS (Cis-regulatory Element Annotation System) tool (\cite{Shin2009}) within the Cistrome package (\cite{Liu2011}). Peak association with regulated genes was estimated by calculating peak density per megabase in all Ensembl v63 nuclear genes, their promoters and close intergenic regions and comparing with the corresponding values for genes up- or down-regulated in Meis1 \ac{KO} and \ac{prepi} embryos. Peak overlap with histone modification data was established by considering 3000pb around the summit of the histone mark peaks and intersecting with transcription factor peaks.
+Genomic profiling of peaks was performed using custom Python scripts and the CEAS (Cis-regulatory Element Annotation System) tool (\cite{Shin2009}) within the Cistrome package (\cite{Liu2011}). Peak association with regulated genes was estimated by calculating peak density per megabase in all Ensembl v63 nuclear genes, their promoters and close intergenic regions and comparing with the corresponding values for genes up- or down-regulated in Meis1 \ac{KO} and \ac{prepi} embryos. 
 
 \section{Statistical Testing}
 
