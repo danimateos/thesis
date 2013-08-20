@@ -1,13 +1,9 @@
-\documentclass[11pt,a4paper]{memoir}
+\documentclass[11pt,a4paper, twoside]{memoir}
 
 \usepackage[utf8]{inputenc}
-
-
 \usepackage[spanish, english]{babel}
-\usepackage{csquotes, graphicx, amsmath, amsfonts, amssymb, textcomp, sidecap}
+\usepackage{csquotes, graphicx, amsmath, amsfonts, amssymb, textcomp, sidecap, pdfpages}
 \usepackage[printonlyused]{acronym}
-
-
 \usepackage[unicode]{hyperref}
 \hypersetup{
     colorlinks,
@@ -17,27 +13,45 @@
     urlcolor=black
 }
 
-\usepackage[style=authoryear,sortcites=true, backend=biber, hyperref=true]{biblatex} 
+%%bibliografia
+\usepackage[
+  style=authoryear,
+  sortcites=true,
+  backend=biber,
+  doi=false,
+  url=false,
+  maxbibnames=15,
+  hyperref=true,
+  firstinits = true
+]{biblatex} 
 \addbibresource{Mateos2013.Tesis.bib}
+\AtEveryBibitem{%
+  \clearlist{language}%
+}
 
+%% numbering and TOC
 \numberwithin{table}{chapter}
 \numberwithin{figure}{chapter}
 \setsecnumdepth{subsection}
 \settocdepth{subsection}
 
+
 %%layout
 \settrims{0pt}{0pt}
-\setlrmarginsandblock{3cm}{4.5cm}{*}
-\setulmarginsandblock{4cm}{4cm}{*}
+\setlrmarginsandblock{3cm}{4cm}{*}
+\setulmarginsandblock{3.5cm}{3.5cm}{*}
 \checkandfixthelayout
-
-\author{Daniel Mateos San Martín}
-
+\pagestyle{ruled}
+%\makefootrule{ruled}{\textwidth}{\normalrulethickness}{\footruleskip}
+%\makefootrule{chapter}{\textwidth}{\normalrulethickness}{\footruleskip}
+\chapterstyle{demo3} %verville\\ wilsondob
 
 \begin{document}
+
 \frontmatter
 \include{text/01.portada}
 \include{text/02.primeraPagina}
+
 \include{text/03.certificadoDirector}
 \include{text/04.agradecimientos}
 
@@ -60,5 +74,6 @@
 
 \include{text/14.bibliografia}
 \include{text/15.anexos}
+
 
 \end{document}
