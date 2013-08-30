@@ -28,7 +28,7 @@ For comparison of Meis site occupancy between positions along the anterior to po
 
 \subsection{Primers}
 
-Proportionality of product amount to input concentration was tested along a range of input DNA amount and number of cycles. 30 to 35 \ac{PCR} cycles were chosen as the optimal proportionality point and used for occupancy testing. Some primers were found not to produce a satisfactory proportionality between input and output and results discarded. [seqs de los primers]
+Proportionality of product amount to input concentration was tested along a range of input DNA amount and number of cycles. 30 to 35 \ac{PCR} cycles were chosen as the optimal proportionality point and used for occupancy testing. Some primers were found not to produce a satisfactory proportionality between input and output and results discarded. %[seqs de los primers]
 
 \subsection{PCR Conditions}
 
@@ -53,23 +53,40 @@ Nuclear extracts were isolated from cells prepared from E11.5 mouse embryonic bo
 EMSA reactions were performed in 20 \textmu l reaction mix containing 10 mM Tris-HCl (pH 7.6), 0.5 mM EDTA 0.5, 0.5 mM EGTA, 5\% glycerol buffer, 80 mM NaCl, 1\textmu g poly-dIdC, 1 mM DTT, 5 \textmu g nuclear extract and 30,000 cpm of the 32P-labeled probe. When indicated, we added unlabeled probe in 50X excess or specific antibodies (4 \textmu g) against Prep1/2 (N15, Santa Cruz Biotechnology, Santa Cruz, USA), Meis (1:1 mix of K830 and K844) or Pbx1 (P20, Santa Cruz Biotechnology, Santa Cruz, USA). Reactions were carried out for 30 min at room temperature, and the complexes resolved by 5\% non-denaturing PAGE. The gel was dried and scanned in a phosphorimager. 
 The following double-stranded oligonucleotides were used, in addition to mutant versions as indicated in figures and text:
 
-5’-AGGGAAGAGCCTGACAGATGACAGTTTCGAAAAA-3’ (Meis Peak 586) -- HEXA
+Meis Peak 586 -- HEXA:
 
-5’-CAAATAACTGATTGATTGCGGTCGAGGCACATTG-3’ (Meis Peak 313) – OCTA
+5’-AGGGAAGAGCCTGACAGATGACAGTTTCGAAAAA-3’ 
 
-5’-GGCCTCGTGATTGACAGGCTCGCCG-3’- DECA
+Meis Peak 313 -- OCTA:
 
-5’-ATGCTGTGACAGTGATAAATGACGGTGCAGAA-3’ (Meis  Peak 1) -- OCTA + HEXA
+5’-CAAATAACTGATTGATTGCGGTCGAGGCACATTG-3’ 
 
-5’-AATTTAAGCAGTGATGAATGAGCTCGGCTG-3 (Meis Peak 595)
+DECA:
+5’-GGCCTCGTGATTGACAGGCTCGCCG-3’
 
-5’-TTTGGGTGACAAAGATGAATGGTCTATTGT-3’ (Meis Peak 9)
+Meis Peak 1 -- OCTA + HEXA:
 
-5’-GACAACCTCGCCTGTGATTGACCCCTGGAGTGG-3’ (Meis Peak 54)
+5’-ATGCTGTGACAGTGATAAATGACGGTGCAGAA-3’ 
 
-5’-AGGGGCCCGTGATTGACAGGCTGAACTACAGACT-3’ (Prep Peak 1440)
+Meis Peak 595:
 
-5’-TTGCTGACAACTGACTGATAAATTATTTTCTGCT-3’ (Meis Peak 857)
+5’-AATTTAAGCAGTGATGAATGAGCTCGGCTG-3
+
+Meis Peak 9:
+
+5’-TTTGGGTGACAAAGATGAATGGTCTATTGT-3’
+
+Meis Peak 54:
+
+5’-GACAACCTCGCCTGTGATTGACCCCTGGAGTGG-3’ 
+
+Prep Peak 1440:
+
+5’-AGGGGCCCGTGATTGACAGGCTGAACTACAGACT-3’ 
+
+Meis Peak 857:
+
+5’-TTGCTGACAACTGACTGATAAATTATTTTCTGCT-3’ 
 
 %\section{Alleles used for LOF}
 
@@ -79,7 +96,7 @@ The following double-stranded oligonucleotides were used, in addition to mutant 
 
 \subsection{Motif Discovery, FIMO}
 
-For the identified peaks, \textit{de novo} motif discovery was run to identify consensus sequences enriched in the selected regions versus the whole genome using rGADEM (\cite{Li2009a}). While similar in its model to previous de novo motif finder algorithms such as MEME (\cite{Bailey2006}), GADEM performs better in large ChIP-seq experiments. Interestingly, rGADEM can identify dimer motifs located close to each other. The algorithm reports probability weight matrices (PWM) summarizing the consensus sequences identified in the peaks. (iii) We identified, interpreted and annotated de novo motifs using MotIV (motif identification and validation). MotIV compares the PWM of the identified de novo motifs with those in the JASPAR TF database (http://jaspar.genereg.net) and provides a significance level for the similarity. MotIV can furthermore report the distribution of distances between pairs of motifs and the percentage of co-localized motifs within the same peak, which might suggest cooperation between TFs. Steps (ii) and (iii) of the pipeline were run for the peaks identified for each TF separately and also for peaks found for two or more TFs. 
+For the identified peaks, \textit{de novo} motif discovery was run to identify consensus sequences enriched in the selected regions versus the whole genome using rGADEM (\cite{Li2009a}). While similar in its model to previous de novo motif finder algorithms such as MEME (\cite{Bailey2006}), GADEM performs better in large ChIP-seq experiments. Interestingly, rGADEM can identify dimer motifs located close to each other. The algorithm reports probability weight matrices (PWM) summarizing the consensus sequences identified in the peaks. (iii) We identified, interpreted and annotated de novo motifs using MotIV (motif identification and validation). MotIV compares the PWM of the identified de novo motifs with those in the JASPAR TF database (\url{http://jaspar.genereg.net}) and provides a significance level for the similarity. MotIV can furthermore report the distribution of distances between pairs of motifs and the percentage of co-localized motifs within the same peak, which might suggest cooperation between TFs. Steps (ii) and (iii) of the pipeline were run for the peaks identified for each TF separately and also for peaks found for two or more TFs. 
 
 Individual instances of the core motifs within all peaks were searched with a local install of the FIMO (Find Individual Motif Ocurrences) program from the MEME suite (\cite{Bailey2009}) with default parameters (individual p-value cutoff $10^{-4}$). The resulting files were parsed and the data added to the peak tables using a custom Python script. 
 
@@ -90,7 +107,7 @@ Individual instances of the core motifs within all peaks were searched with a lo
 
 Peak overlapping, correlation with RNA-seq data and conservation data aggregation were performed on the Galaxy bioinformatics platform (\cite{Blankenberg2010a, Goecks2010}). The set of peak coordinates for each factor was intersected with the sets for the other factors, the nearest transcript expression data were added to the tables, and the average conservation value (measured as the PhastCons 30-way vertebrate score (\cite{Siepel2005}) was aggregated over the length of each peak with the aggregate genomic scores tool.
 
-GC percentage count and literal motif match finding were performed using custom Python scripts (http://www.python.org/) run over the fasta sequence of the peaks.
+GC percentage count and literal motif match finding were performed using custom Python scripts (\url{http://www.python.org/}) run over the fasta sequence of the peaks.
 
 Genomic profiling of peaks was performed using custom Python scripts and the CEAS (Cis-regulatory Element Annotation System) tool (\cite{Shin2009}) within the Cistrome package (\cite{Liu2011}). Peak association with regulated genes was estimated by calculating peak density per megabase in all Ensembl v63 nuclear genes, their promoters and close intergenic regions and comparing with the corresponding values for genes up- or down-regulated in Meis1 \ac{KO} and \ac{prepi} embryos. 
 
@@ -98,13 +115,13 @@ Genomic profiling of peaks was performed using custom Python scripts and the CEA
 
 \subsection{Random Expectations}
 
-For \ac{OCTA} motif variants, we considered the expected number of instances of a motif containing i G/Cs and j A/Ts to be $I_{variant} = N x {\left(\frac{P(GC)}{2}\right)}^i x {\left(\frac{P(AT)}{2}\right)}^j$, where I is the number of instances expected, N is the number of bases in the collection and GC and AT are the GC and AT fractions in the collection.
+For \ac{OCTA} motif variants, we considered the expected number of instances of a motif containing \textit{i} G/Cs and \textit{j} A/Ts to be $I_{variant} = N x {\left(\frac{P(GC)}{2}\right)}^i x {\left(\frac{P(AT)}{2}\right)}^j$, where I is the number of instances expected, N is the number of bases in the collection and GC and AT are the GC and AT fractions in the collection.
 
 For the number of co-regulated genes, we considered a random expectation the intersection of each of 4 pairs two independent sets. 
 
 \subsection{Tests Used}
 
-We estimated the significance of OCTA motif variants with a Poisson test in which $\lambda$ equals the random exxpected number of instances.
+We estimated the significance of OCTA motif variants with a Poisson test in which λ equals the random expected number of instances.
 
 Overlap between \ac{TALE} factors and Hoxes was tested with $\chi^2$ tests of independence applied to the relevant contingency tables, as was co-regulation of misregulated genes in MEis1 and Prep1 deficient embryos.
 
